@@ -32,6 +32,7 @@
         case "oefenen":   return renderOefenen();
         case "verbanden": return renderVerbanden();
         case "toets":     return renderToetsConfig();
+        case "boek":      return renderBoek();
       }
     } catch (e) {
       showError(e.message || String(e));
@@ -96,6 +97,10 @@
           <h3>🎯 Proeftoets</h3>
           <p>Realistische test op tijd. Eindscore + alles nakijken.</p>
         </div>
+        <div class="tile" data-go="boek">
+          <h3>📷 Boekpagina's</h3>
+          <p>Door alle foto's van het boek bladeren. Handig bij het opzoeken.</p>
+        </div>
       </div>
 
       <div class="card" style="margin-top:18px">
@@ -117,10 +122,11 @@
     const items = [
       ...content.begrippen.map(b => ({
         id: "b:" + b.id, hoofdstuk: b.hoofdstuk, front: b.term, back: b.definitie, kind: "Begrip",
+        afbeelding: b.afbeelding, bron: b.bron,
       })),
       ...content.feiten.map(f => ({
         id: "f:" + f.id, hoofdstuk: f.hoofdstuk, front: "Feit (" + Data.chapterTitle(content, f.hoofdstuk) + ")",
-        back: f.feit, kind: "Feit",
+        back: f.feit, kind: "Feit", afbeelding: f.afbeelding,
       })),
     ];
     const byId = Object.fromEntries(items.map(i => [i.id, i]));
@@ -161,7 +167,12 @@
       document.getElementById("flash").onclick = () => {
         if (flipped) return;
         flipped = true;
-        document.getElementById("face").innerHTML = esc(it.back);
+        const imgHtml = it.afbeelding
+          ? `<figure class="qimg flash-img"><a href="${esc(it.afbeelding)}" target="_blank" rel="noopener">
+               <img loading="lazy" src="${esc(it.afbeelding)}" alt="" /></a>
+               ${it.bron ? `<div class="img-cap">${esc(it.bron)}</div>` : ""}</figure>`
+          : "";
+        document.getElementById("face").innerHTML = imgHtml + `<div>${esc(it.back)}</div>`;
         const a = document.getElementById("actions");
         a.innerHTML = "";
         const buttons = [
@@ -195,7 +206,10 @@
       if (!list.length) continue;
       html += `<div class="card"><h3>${esc(h.titel)} <span class="muted">(${list.length})</span></h3>
         <ul class="def-list">${list.map(b => `
-          <li><span class="term">${esc(b.term)}</span>
+          <li>
+            ${b.afbeelding ? `<a class="thumb" href="${esc(b.afbeelding)}" target="_blank" rel="noopener">
+              <img loading="lazy" src="${esc(b.afbeelding)}" alt="" /></a>` : ""}
+            <span class="term">${esc(b.term)}</span>
             <span class="meta">${(b.tags || []).map(t => `#${esc(t)}`).join(" ")}</span>
             <div>${esc(b.definitie)}</div>
           </li>`).join("")}</ul></div>`;
@@ -313,6 +327,8 @@
       html += `<div class="card">
         <h3>${esc(v.titel)} <span class="chip">${esc(Data.chapterTitle(content, v.hoofdstuk))}</span></h3>
         <div class="chips" style="margin:6px 0">${begripsTermen.map(t => `<span class="chip brand">${esc(t)}</span>`).join("")}</div>
+        ${v.afbeelding ? `<figure class="qimg"><a href="${esc(v.afbeelding)}" target="_blank" rel="noopener">
+          <img loading="lazy" src="${esc(v.afbeelding)}" alt="" /></a></figure>` : ""}
         <details><summary>Toon uitleg</summary><p>${esc(v.uitleg)}</p></details>
       </div>`;
     }
@@ -484,6 +500,35 @@
       });
     };
     next();
+  };
+
+  // ---------- BOEK (foto's bekijken) ----------
+  const PAGE_FILES = [
+    "101657948","101705255","101713805","101718373","101726780","101732336",
+    "101740664","101745196","101752681",
+    "101757207","101806392","101811140","101819863","101823729","101831251","101908856",
+    "101920404","101924475","101935795","101942220","101950157","101954550","102001394","102006026","102013669","102018397",
+    "102026478","102030802","102037810","102042676","102051386","102056072","102104432","102109211","102122953"
+  ];
+  const PAGE_SECTIONS = [
+    { titel: "5.1 Het skelet",                idx: [0, 9] },
+    { titel: "5.2 De bouw van botten",        idx: [9, 16] },
+    { titel: "5.3 Beenverbindingen / gewrichten", idx: [16, 26] },
+    { titel: "5.4 Spieren",                   idx: [26, 35] },
+  ];
+  const renderBoek = () => {
+    subtitle.textContent = "Boekpagina's — alle foto's";
+    let html = `<div class="card"><h2>Pagina's uit Stijn's boek</h2>
+      <p class="muted">Klik op een foto voor de volledige pagina. Handig om iets na te zoeken bij het leren.</p></div>`;
+    for (const s of PAGE_SECTIONS) {
+      const slice = PAGE_FILES.slice(s.idx[0], s.idx[1]);
+      html += `<div class="card"><h3>${esc(s.titel)} <span class="muted">(${slice.length} pagina's)</span></h3>
+        <div class="pages-grid">${slice.map(id => `
+          <a href="img/pages/PXL_20260524_${id}.jpg" target="_blank" rel="noopener" title="${id}">
+            <img loading="lazy" src="img/pages/PXL_20260524_${id}.jpg" alt="pagina ${id}" />
+          </a>`).join("")}</div></div>`;
+    }
+    view.innerHTML = html;
   };
 
   // ---------- bootstrap ----------

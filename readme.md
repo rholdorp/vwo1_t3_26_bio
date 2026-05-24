@@ -59,10 +59,21 @@ Het bestand `.nojekyll` staat er zodat Pages alle bestanden ongewijzigd publicee
 
 ## Status
 
-- [x] App-shell, navigatie en styling
-- [x] Spaced-repetition flashcards (begrippen + feiten)
+- [x] App-shell, navigatie en styling, met **plaatjes-ondersteuning** (in vragen, flashcards, begrippen en verbanden)
+- [x] Spaced-repetition flashcards (begrippen + feiten), met foto van het boek op de achterkant
 - [x] Oefenmodus met filter op hoofdstuk/type/moeilijkheid
 - [x] Kruisverband-overzicht + inzichtvraag-ronde
-- [x] Proeftoets met timer, mix en nakijken
-- [x] Schema + voorbeeldcontent voor 4 hoofdstukken (cellen, planten, ecosystemen, ordening)
-- [ ] Echte stof uit Stijn's boek invullen vanuit `raw/`-foto's
+- [x] Proeftoets met timer, mix en nakijken (met plaatjes in de review)
+- [x] Boek-modus: alle foto's per paragraaf doorbladeren
+- [x] Schema + content-tooling (`tools/build_content.py`) voor onderhoud
+- [x] **Hoofdstuk 5 (Stevigheid en beweging)** ingevoerd: 4 paragrafen, 65 begrippen, 16 feiten, 8 kruisverbanden, 42 vragen (15 mc, 7 open, 20 inzicht), met de boekfoto's als illustraties
+
+## Stof toevoegen / aanpassen
+
+De leerstof zit in **`tools/build_content.py`** (één Python-bestand met alle begrippen, feiten, verbanden en vragen netjes gegroepeerd). Pas dat aan en bouw opnieuw met:
+
+```bash
+python3 tools/build_content.py     # schrijft data/content.json
+```
+
+De app valideert `content.json` bij elke laad-actie; foutmeldingen verschijnen onderaan.

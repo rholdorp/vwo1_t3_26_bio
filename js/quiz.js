@@ -39,11 +39,19 @@ const Quiz = (() => {
 
   // Rendert één vraag in `host`. Roept `onAnswered(correct: boolean)` aan zodra
   // de leerling de vraag heeft afgesloten (na zelfbeoordeling bij open vragen).
+  const renderImage = (afb, bron) => {
+    if (!afb) return "";
+    const cap = bron ? `<div class="img-cap">${escapeHtml(bron)}</div>` : "";
+    return `<figure class="qimg"><a href="${escapeHtml(afb)}" target="_blank" rel="noopener">
+      <img loading="lazy" src="${escapeHtml(afb)}" alt="" /></a>${cap}</figure>`;
+  };
+
   const render = (host, q, { idxInfo, onAnswered } = {}) => {
     host.innerHTML = "";
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = renderQuestionHeader(q, idxInfo) +
+      renderImage(q.afbeelding, q.bron) +
       `<h3 style="margin-top:4px">${escapeHtml(q.vraag)}</h3>`;
     host.appendChild(card);
 
@@ -163,5 +171,5 @@ const Quiz = (() => {
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
     }[c]));
 
-  return { render, shuffle, escapeHtml, matchKernwoorden };
+  return { render, renderImage, shuffle, escapeHtml, matchKernwoorden };
 })();

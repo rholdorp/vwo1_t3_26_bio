@@ -2,3 +2,11 @@
 *.swp
 node_modules/
 .vscode/
+
+# Originele boekfoto's (groot, ~210MB) — niet committen.
+# De gecomprimeerde versies in img/pages/ worden door de app gebruikt
+# en zijn klein genoeg om wel te committen.
+raw/*.jpg
+raw/*.jpeg
+raw/*.png
+raw/*.heic
