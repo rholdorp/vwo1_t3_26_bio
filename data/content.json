@@ -67,6 +67,51 @@
       ]
     },
     {
+      "id": "b-voorhoofdsbeen",
+      "hoofdstuk": "h51",
+      "term": "Voorhoofdsbeen",
+      "definitie": "Het grote bot van je voorhoofd; onderdeel van de schedel.",
+      "tags": [
+        "hoofd"
+      ]
+    },
+    {
+      "id": "b-wandbeen",
+      "hoofdstuk": "h51",
+      "term": "Wandbeen",
+      "definitie": "Bot aan de zijkant/bovenkant van de schedel.",
+      "tags": [
+        "hoofd"
+      ]
+    },
+    {
+      "id": "b-achterhoofdsbeen",
+      "hoofdstuk": "h51",
+      "term": "Achterhoofdsbeen",
+      "definitie": "Bot achter aan de schedel; daar zit het gat waar het ruggenmerg naar binnen komt.",
+      "tags": [
+        "hoofd"
+      ]
+    },
+    {
+      "id": "b-bovenkaak",
+      "hoofdstuk": "h51",
+      "term": "Bovenkaak",
+      "definitie": "Bovenste, vaste kaakbot van de schedel.",
+      "tags": [
+        "hoofd"
+      ]
+    },
+    {
+      "id": "b-onderkaak",
+      "hoofdstuk": "h51",
+      "term": "Onderkaak",
+      "definitie": "Onderste, beweegbare kaak; het enige beweegbare bot in de schedel.",
+      "tags": [
+        "hoofd"
+      ]
+    },
+    {
       "id": "b-wervelkolom",
       "hoofdstuk": "h51",
       "term": "Wervelkolom (ruggengraat)",
@@ -186,6 +231,123 @@
       ]
     },
     {
+      "id": "b-hand",
+      "hoofdstuk": "h51",
+      "term": "Handwortelbeentjes",
+      "definitie": "Acht kleine botjes in de pols; samen met de middenhandsbeentjes en vingerkootjes vormen ze de hand.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-middenhand",
+      "hoofdstuk": "h51",
+      "term": "Middenhandsbeentjes",
+      "definitie": "De vijf langwerpige botjes in je handpalm, tussen pols en vingers.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-vingerkootjes",
+      "hoofdstuk": "h51",
+      "term": "Vingerkootjes",
+      "definitie": "De korte botjes waaruit elke vinger is opgebouwd (duim: 2; andere vingers: 3 elk).",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-voet",
+      "hoofdstuk": "h51",
+      "term": "Voetwortelbeentjes",
+      "definitie": "Zeven botjes die de wreef vormen; samen met de middenvoetsbeentjes en teenkootjes vormen ze de voet.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-middenvoet",
+      "hoofdstuk": "h51",
+      "term": "Middenvoetsbeentjes",
+      "definitie": "Vijf langwerpige botjes in de voet, tussen wreef en tenen.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-teenkootjes",
+      "hoofdstuk": "h51",
+      "term": "Teenkootjes",
+      "definitie": "De korte botjes waaruit elke teen bestaat (grote teen: 2; andere tenen: 3 elk).",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-opperarmbeen",
+      "hoofdstuk": "h51",
+      "term": "Opperarmbeen",
+      "definitie": "Het bovenbot van de arm, tussen schouder en elleboog.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-spaakbeen",
+      "hoofdstuk": "h53",
+      "term": "Spaakbeen",
+      "definitie": "Onderarmbot aan de duim-kant (buitenkant). Aan dit bot trekt de biceps om je arm te buigen.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-ellepijp",
+      "hoofdstuk": "h53",
+      "term": "Ellepijp",
+      "definitie": "Onderarmbot aan de pink-kant (binnenkant). Aan dit bot trekt de triceps om je arm te strekken.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-dijbeen",
+      "hoofdstuk": "h51",
+      "term": "Dijbeen",
+      "definitie": "Het grote, sterke bovenbeenbot — het langste bot van het lichaam.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-kniebeen",
+      "hoofdstuk": "h53",
+      "term": "Kniebeen (knieschijf)",
+      "definitie": "Klein, plat bot vóór het kniegewricht; beschermt het gewricht en geeft pezen extra hefboomkracht.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-scheenbeen",
+      "hoofdstuk": "h53",
+      "term": "Scheenbeen",
+      "definitie": "Het dikke onderbeen-bot aan de binnenkant; draagt het lichaamsgewicht.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
+      "id": "b-kuitbeen",
+      "hoofdstuk": "h53",
+      "term": "Kuitbeen",
+      "definitie": "Het dunne onderbeen-bot aan de buitenkant, naast het scheenbeen.",
+      "tags": [
+        "ledematen"
+      ]
+    },
+    {
       "id": "b-uitsteeksels",
       "hoofdstuk": "h51",
       "term": "Uitsteeksels (van botten)",
@@ -285,9 +447,64 @@
       "id": "b-beenmerg",
       "hoofdstuk": "h52",
       "term": "Beenmerg",
-      "definitie": "Zachte stof binnen in botten; in rood beenmerg worden nieuwe bloedcellen aangemaakt.",
+      "definitie": "Zachte stof binnen in botten. Er zijn twee soorten: rood en geel.",
       "tags": [
         "bot"
+      ]
+    },
+    {
+      "id": "b-rood-merg",
+      "hoofdstuk": "h52",
+      "term": "Rood beenmerg",
+      "definitie": "Beenmerg waarin nieuwe bloedcellen worden aangemaakt; zit in de koppen van pijpbeenderen en in platte beenderen (zoals schouderblad en heupbeen).",
+      "tags": [
+        "bot"
+      ]
+    },
+    {
+      "id": "b-geel-merg",
+      "hoofdstuk": "h52",
+      "term": "Geel beenmerg",
+      "definitie": "Vetrijk beenmerg in de mergholte van pijpbeenderen; dient als energievoorraad.",
+      "tags": [
+        "bot"
+      ]
+    },
+    {
+      "id": "b-botvlies",
+      "hoofdstuk": "h52",
+      "term": "Botvlies",
+      "definitie": "Dun, taai vlies om de buitenkant van een bot; bevat bloedvaten en zenuwen en speelt een rol bij groei en herstel.",
+      "afbeelding": "img/pages/PXL_20260524_101823729.jpg",
+      "tags": [
+        "bot"
+      ]
+    },
+    {
+      "id": "b-fontanellen",
+      "hoofdstuk": "h52",
+      "term": "Fontanellen",
+      "definitie": "Open plekken op de schedel van een baby waar de schedelbotten nog niet aan elkaar zitten; gevuld met bindweefsel. Maken het hoofd vervormbaar bij de geboorte en geven de hersenen ruimte om te groeien. Sluiten zich na ongeveer anderhalf jaar tot een naad.",
+      "tags": [
+        "groei"
+      ]
+    },
+    {
+      "id": "b-vitamine-d",
+      "hoofdstuk": "h52",
+      "term": "Vitamine D",
+      "definitie": "Vitamine die je lichaam zelf aanmaakt onder invloed van zonlicht; nodig om kalk (calcium) op te nemen voor sterke botten.",
+      "tags": [
+        "voeding"
+      ]
+    },
+    {
+      "id": "b-calcium",
+      "hoofdstuk": "h52",
+      "term": "Calcium (kalk)",
+      "definitie": "Mineraal dat nodig is voor de kalkzouten in botten; zit vooral in zuivelproducten.",
+      "tags": [
+        "voeding"
       ]
     },
     {
@@ -359,12 +576,40 @@
       ]
     },
     {
+      "id": "b-verb-vergroeid",
+      "hoofdstuk": "h53",
+      "term": "Vergroeide botten",
+      "definitie": "Botten die zo aan elkaar zijn vastgegroeid dat er geen beweging tussen mogelijk is. Voorbeeld: de wervels van het heiligbeen en het staartbeen.",
+      "tags": [
+        "verbinding"
+      ]
+    },
+    {
+      "id": "b-verb-naad",
+      "hoofdstuk": "h53",
+      "term": "Naad",
+      "definitie": "Onbeweegbare verbinding waarbij botten als puzzelstukjes in elkaar passen. Voorbeeld: de schedelbotten van een volwassene.",
+      "tags": [
+        "verbinding"
+      ]
+    },
+    {
+      "id": "b-verb-kraak",
+      "hoofdstuk": "h53",
+      "term": "Verbinding met kraakbeen",
+      "definitie": "Botten verbonden door een laagje kraakbeen waardoor een klein beetje beweging mogelijk is. Voorbeeld: ribben aan het borstbeen, schijven tussen de wervels.",
+      "tags": [
+        "verbinding"
+      ]
+    },
+    {
       "id": "b-gewricht",
       "hoofdstuk": "h53",
       "term": "Gewricht (beenverbinding met beweging)",
-      "definitie": "Beweegbare verbinding tussen twee botten.",
+      "definitie": "Beweegbare verbinding tussen twee botten. De vierde manier waarop botten verbonden kunnen zijn (naast vergroeid, naad en kraakbeen).",
       "afbeelding": "img/pages/PXL_20260524_101924475.jpg",
       "tags": [
+        "verbinding",
         "gewricht"
       ]
     },
@@ -404,6 +649,15 @@
       "term": "Schuifgewricht",
       "definitie": "Vlakke botoppervlakken schuiven langs elkaar; weinig beweging. Voorbeeld: tussen sleutelbeen en schoudertop (acromion).",
       "afbeelding": "img/pages/PXL_20260524_102013669.jpg",
+      "tags": [
+        "type"
+      ]
+    },
+    {
+      "id": "b-gew-zadel",
+      "hoofdstuk": "h53",
+      "term": "Zadelgewricht",
+      "definitie": "Twee bot-oppervlakken die als ruiter en zadel in elkaar passen. Maakt beweging in twee richtingen mogelijk. Voorbeeld: in de duim, waardoor je je duim alle andere vingers kunt laten aanraken (opponeren).",
       "tags": [
         "type"
       ]
@@ -455,6 +709,33 @@
       ]
     },
     {
+      "id": "b-kapselbanden",
+      "hoofdstuk": "h53",
+      "term": "Kapselbanden",
+      "definitie": "Extra stevige banden ín het gewrichtskapsel die het kapsel verstevigen, vooral bij zwaar belaste gewrichten zoals de heup.",
+      "tags": [
+        "bouw"
+      ]
+    },
+    {
+      "id": "b-artrose",
+      "hoofdstuk": "h53",
+      "term": "Artrose",
+      "definitie": "Slijtage van het gewrichtskraakbeen waardoor botten niet meer soepel over elkaar bewegen; geeft pijn en stijfheid in het gewricht.",
+      "tags": [
+        "aandoening"
+      ]
+    },
+    {
+      "id": "b-prothese",
+      "hoofdstuk": "h53",
+      "term": "Prothese (kunstgewricht)",
+      "definitie": "Kunstmatige vervanging van een (deel van een) gewricht, bijvoorbeeld een kunstheup of kunstknie. Gaat ongeveer 20 jaar mee.",
+      "tags": [
+        "aandoening"
+      ]
+    },
+    {
       "id": "b-hypermob",
       "hoofdstuk": "h53",
       "term": "Hypermobiliteit",
@@ -490,6 +771,52 @@
       "afbeelding": "img/pages/PXL_20260524_102030802.jpg",
       "tags": [
         "bouw"
+      ]
+    },
+    {
+      "id": "b-spierstelsel",
+      "hoofdstuk": "h54",
+      "term": "Spierstelsel",
+      "definitie": "Alle skeletspieren in het lichaam samen. Bevat oppervlakkige (zichtbare) spieren en daaronder de diepe spieren.",
+      "afbeelding": "img/pages/PXL_20260524_102026478.jpg",
+      "tags": [
+        "overzicht"
+      ]
+    },
+    {
+      "id": "b-bewust",
+      "hoofdstuk": "h54",
+      "term": "Bewuste beweging",
+      "definitie": "Beweging die je zelf kunt starten en sturen (zoals lopen of zwaaien). Wordt gedaan door skeletspieren (dwarsgestreept).",
+      "tags": [
+        "werking"
+      ]
+    },
+    {
+      "id": "b-onbewust",
+      "hoofdstuk": "h54",
+      "term": "Onbewuste beweging",
+      "definitie": "Beweging die je lichaam zelf regelt zonder dat je erbij hoeft na te denken (zoals darmen, hart, bloedvaten). Wordt gedaan door orgaanspieren (glad) en de hartspier.",
+      "tags": [
+        "werking"
+      ]
+    },
+    {
+      "id": "b-buigspier",
+      "hoofdstuk": "h54",
+      "term": "Buigspier",
+      "definitie": "Een spier die een gewricht buigt (bijv. de biceps buigt je elleboog).",
+      "tags": [
+        "werking"
+      ]
+    },
+    {
+      "id": "b-strekspier",
+      "hoofdstuk": "h54",
+      "term": "Strekspier",
+      "definitie": "Een spier die een gewricht strekt (bijv. de triceps strekt je elleboog).",
+      "tags": [
+        "werking"
       ]
     },
     {
@@ -548,6 +875,25 @@
       "definitie": "Stevig, niet-rekbaar bindweefsel waarmee een spier aan een bot vastzit.",
       "tags": [
         "bouw"
+      ]
+    },
+    {
+      "id": "b-achillespees",
+      "hoofdstuk": "h54",
+      "term": "Achillespees",
+      "definitie": "De dikke pees die de kuitspier met het hielbot verbindt; de langste en sterkste pees van het lichaam.",
+      "tags": [
+        "bouw"
+      ]
+    },
+    {
+      "id": "b-actine-myo",
+      "hoofdstuk": "h54",
+      "term": "Actine en myosine",
+      "definitie": "Twee soorten eiwitten waaruit de spierfibrillen bestaan. Bij het samentrekken schuiven actine- en myosinedraden in elkaar, waardoor de spier korter wordt.",
+      "afbeelding": "img/pages/PXL_20260524_102037810.jpg",
+      "tags": [
+        "werking"
       ]
     },
     {
@@ -645,6 +991,89 @@
       "tags": [
         "voorbeeld"
       ]
+    },
+    {
+      "id": "b-scheenspier",
+      "hoofdstuk": "h54",
+      "term": "Scheenbeenspier",
+      "definitie": "Spier vóór aan het onderbeen; tilt je voet op. Antagonist van de kuitspier — dunner dan de kuitspier omdat hij minder kracht hoeft te leveren.",
+      "tags": [
+        "voorbeeld"
+      ]
+    },
+    {
+      "id": "b-dijbeenspier",
+      "hoofdstuk": "h54",
+      "term": "Voorste dijbeenspier (quadriceps)",
+      "definitie": "Grote spier aan de voorkant van het bovenbeen; strekt de knie.",
+      "tags": [
+        "voorbeeld"
+      ]
+    },
+    {
+      "id": "b-achterdij",
+      "hoofdstuk": "h54",
+      "term": "Achterste dijbeenspier (hamstring)",
+      "definitie": "Spier aan de achterkant van het bovenbeen; buigt de knie. Antagonist van de voorste dijbeenspier.",
+      "tags": [
+        "voorbeeld"
+      ]
+    },
+    {
+      "id": "b-bilspier",
+      "hoofdstuk": "h54",
+      "term": "Bilspier",
+      "definitie": "Grote spier op je achterwerk; strekt de heup (helpt bij staan, lopen en opstaan).",
+      "tags": [
+        "voorbeeld"
+      ]
+    },
+    {
+      "id": "b-buikspier",
+      "hoofdstuk": "h54",
+      "term": "Buikspieren",
+      "definitie": "Spieren aan de voorkant van de buik die de romp buigen en de organen op hun plaats houden.",
+      "tags": [
+        "voorbeeld"
+      ]
+    },
+    {
+      "id": "b-rugspier",
+      "hoofdstuk": "h54",
+      "term": "Rugspieren",
+      "definitie": "Spieren langs de wervelkolom die je rug rechthouden; antagonist van de buikspieren. Bestaan grotendeels uit langzame vezels (houdings­spieren).",
+      "tags": [
+        "voorbeeld"
+      ]
+    },
+    {
+      "id": "b-borstspier",
+      "hoofdstuk": "h54",
+      "term": "Borstspier",
+      "definitie": "Grote spier op de borst; trekt de bovenarm naar voren en naar binnen (bv. bij drukken, knijpen).",
+      "tags": [
+        "voorbeeld"
+      ]
+    },
+    {
+      "id": "b-monnikskap",
+      "hoofdstuk": "h54",
+      "term": "Monnikskapspier",
+      "definitie": "Grote spier in nek en bovenrug die het schouderblad beweegt en je hoofd ondersteunt.",
+      "afbeelding": "img/pages/PXL_20260524_102026478.jpg",
+      "tags": [
+        "voorbeeld"
+      ]
+    },
+    {
+      "id": "b-tussenribsp",
+      "hoofdstuk": "h54",
+      "term": "Tussenribspieren",
+      "definitie": "Spieren tussen de ribben die je gebruikt bij de ademhaling. Bestaan uit dwarsgestreept spierweefsel, maar werken (meestal) onbewust — ze horen bij de onwillekeurige spieren.",
+      "afbeelding": "img/pages/PXL_20260524_102109211.jpg",
+      "tags": [
+        "voorbeeld"
+      ]
     }
   ],
   "feiten": [
@@ -734,6 +1163,36 @@
       "id": "f-snel-langz",
       "hoofdstuk": "h54",
       "feit": "Snelle spiervezels = veel kracht, korte tijd. Langzame spiervezels = minder kracht, lange tijd. Sprinters hebben meer snelle, marathonlopers meer langzame vezels."
+    },
+    {
+      "id": "f-vier-verb",
+      "hoofdstuk": "h53",
+      "feit": "Botten kunnen op vier manieren verbonden zijn: vergroeid (geen beweging), naad (geen beweging), kraakbeen (weinig beweging) of gewricht (veel beweging)."
+    },
+    {
+      "id": "f-fontanel",
+      "hoofdstuk": "h52",
+      "feit": "Bij een baby zitten de schedelbotten nog niet aan elkaar vast — daartussen zitten fontanellen (bindweefsel-plekken). Die maken het hoofd vervormbaar bij de geboorte en geven de hersenen ruimte om te groeien. Na ±1,5 jaar zijn ze dichtgegroeid tot een naad."
+    },
+    {
+      "id": "f-vit-d-calc",
+      "hoofdstuk": "h52",
+      "feit": "Sterke botten heb je nodig: voldoende calcium (kalk, vooral uit zuivel) én voldoende vitamine D (uit zonlicht, of via voeding) zodat het lichaam dat calcium kan opnemen."
+    },
+    {
+      "id": "f-actine-myo",
+      "hoofdstuk": "h54",
+      "feit": "Een spier trekt samen doordat actine- en myosine-eiwitten in de spierfibrillen langs elkaar in elkaar schuiven. Daardoor wordt de spier korter en dikker."
+    },
+    {
+      "id": "f-tussenrib",
+      "hoofdstuk": "h54",
+      "feit": "De tussenribspieren zijn skeletspier-weefsel (dwarsgestreept), maar werken meestal onbewust bij de ademhaling — een uitzondering op de regel 'dwarsgestreept = bewust'."
+    },
+    {
+      "id": "f-achilles",
+      "hoofdstuk": "h54",
+      "feit": "De achillespees verbindt de kuitspier met de hiel. Bij volledige afscheuring kun je je voet niet meer naar beneden bewegen omdat de kuitspier dan losschiet."
     }
   ],
   "verbanden": [
