@@ -11,7 +11,7 @@ const Quiz = (() => {
   };
 
   // -------- SVG loader (gedeeld met Aanwijzen-modus) -----------------------
-  const SVG_VERSION = "6";
+  const SVG_VERSION = "5";
   const _svgCache = {};
   const loadSvg = (path) => {
     if (!_svgCache[path]) {
