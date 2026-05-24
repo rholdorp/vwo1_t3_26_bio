@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bio Trainer — VWO 1 / T3 / wk 26</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🧬</span>
+      <div>
+        <h1>Bio Trainer</h1>
+        <p class="sub" id="subtitle">Laden…</p>
+      </div>
+    </div>
+    <nav class="modes" id="modes">
+      <button data-mode="home"      class="active">Start</button>
+      <button data-mode="leren">Leren</button>
+      <button data-mode="begrippen">Begrippen</button>
+      <button data-mode="oefenen">Oefenen</button>
+      <button data-mode="verbanden">Verbanden</button>
+      <button data-mode="toets">Proeftoets</button>
+    </nav>
+  </header>
+
+  <main id="view"></main>
+
+  <div id="error" class="error hidden"></div>
+
+  <footer class="footer">
+    <span>Stof: <code>data/content.json</code> · Bron-foto's: <code>raw/</code></span>
+    <button id="resetBtn" class="link">Voortgang wissen</button>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+{
+  "vak": "Biologie",
+  "niveau": "VWO 1",
+  "proefwerk": "Trimester 3 — week 26",
+  "hoofdstukken": [
+    { "id": "h5", "titel": "Cellen en weefsels", "bron": "raw/PLAATS_FOTO_HIER.jpg" },
+    { "id": "h6", "titel": "Planten: bouw en fotosynthese", "bron": "raw/PLAATS_FOTO_HIER.jpg" },
+    { "id": "h7", "titel": "Ecosystemen en voedselrelaties", "bron": "raw/PLAATS_FOTO_HIER.jpg" },
+    { "id": "h8", "titel": "Ordening van het leven", "bron": "raw/PLAATS_FOTO_HIER.jpg" }
+  ],
+  "begrippen": [
+    { "id": "b-cel",            "hoofdstuk": "h5", "term": "Cel",            "definitie": "De kleinste levende bouwsteen van een organisme.", "tags": ["bouw"] },
+    { "id": "b-celkern",        "hoofdstuk": "h5", "term": "Celkern",        "definitie": "Onderdeel van de cel waarin het DNA (erfelijke informatie) ligt.", "tags": ["bouw"] },
+    { "id": "b-celmembraan",    "hoofdstuk": "h5", "term": "Celmembraan",    "definitie": "Het dunne laagje om de cel dat bepaalt wat erin en eruit gaat.", "tags": ["bouw"] },
+    { "id": "b-cytoplasma",     "hoofdstuk": "h5", "term": "Cytoplasma",     "definitie": "De geleiachtige stof in de cel waarin de celorganellen liggen.", "tags": ["bouw"] },
+    { "id": "b-mitochondrium",  "hoofdstuk": "h5", "term": "Mitochondrium",  "definitie": "Celorganel waar de verbranding (energieproductie) plaatsvindt.", "tags": ["energie"] },
+    { "id": "b-chloroplast",    "hoofdstuk": "h5", "term": "Bladgroenkorrel (chloroplast)", "definitie": "Celorganel in plantencellen waarin fotosynthese plaatsvindt.", "tags": ["plant", "energie"] },
+    { "id": "b-vacuole",        "hoofdstuk": "h5", "term": "Vacuole",        "definitie": "Grote blaas met vocht in plantencellen; geeft stevigheid.", "tags": ["plant"] },
+    { "id": "b-celwand",        "hoofdstuk": "h5", "term": "Celwand",        "definitie": "Stevige wand om plantencellen, gemaakt van cellulose.", "tags": ["plant"] },
+    { "id": "b-weefsel",        "hoofdstuk": "h5", "term": "Weefsel",        "definitie": "Een groep cellen met dezelfde vorm en functie.", "tags": ["bouw"] },
+    { "id": "b-orgaan",         "hoofdstuk": "h5", "term": "Orgaan",         "definitie": "Verschillende weefsels die samenwerken aan één taak.", "tags": ["bouw"] },
+
+    { "id": "b-fotosynthese",   "hoofdstuk": "h6", "term": "Fotosynthese",   "definitie": "Proces waarbij planten met licht uit CO₂ en water glucose en zuurstof maken.", "tags": ["plant", "energie"] },
+    { "id": "b-verbranding",    "hoofdstuk": "h6", "term": "Verbranding",    "definitie": "Proces waarbij glucose met zuurstof wordt afgebroken tot CO₂ en water, waarbij energie vrijkomt.", "tags": ["energie"] },
+    { "id": "b-huidmondje",     "hoofdstuk": "h6", "term": "Huidmondje",     "definitie": "Opening in de onderkant van het blad waar CO₂ in en zuurstof/water uit gaan.", "tags": ["plant"] },
+    { "id": "b-bladgroen",      "hoofdstuk": "h6", "term": "Bladgroen",      "definitie": "Groene kleurstof in bladgroenkorrels die licht opvangt voor fotosynthese.", "tags": ["plant"] },
+    { "id": "b-wortel",         "hoofdstuk": "h6", "term": "Wortel",         "definitie": "Orgaan van een plant dat water en mineralen opneemt uit de grond en de plant verankert.", "tags": ["plant"] },
+
+    { "id": "b-ecosysteem",     "hoofdstuk": "h7", "term": "Ecosysteem",     "definitie": "Een gebied met alle organismen en hun omgeving, die elkaar beïnvloeden.", "tags": ["ecologie"] },
+    { "id": "b-producent",      "hoofdstuk": "h7", "term": "Producent",      "definitie": "Organisme dat zijn eigen voedsel maakt via fotosynthese (planten).", "tags": ["ecologie"] },
+    { "id": "b-consument",      "hoofdstuk": "h7", "term": "Consument",      "definitie": "Organisme dat andere organismen eet om aan voedsel te komen.", "tags": ["ecologie"] },
+    { "id": "b-reducent",       "hoofdstuk": "h7", "term": "Reducent",       "definitie": "Organisme (bv. bacterie, schimmel) dat dode resten afbreekt tot mineralen.", "tags": ["ecologie"] },
+    { "id": "b-voedselketen",   "hoofdstuk": "h7", "term": "Voedselketen",   "definitie": "Reeks organismen waarin elk volgend organisme het vorige eet.", "tags": ["ecologie"] },
+    { "id": "b-voedselweb",     "hoofdstuk": "h7", "term": "Voedselweb",     "definitie": "Meerdere voedselketens die met elkaar verbonden zijn in een ecosysteem.", "tags": ["ecologie"] },
+
+    { "id": "b-soort",          "hoofdstuk": "h8", "term": "Soort",          "definitie": "Groep organismen die met elkaar vruchtbare nakomelingen kunnen krijgen.", "tags": ["ordening"] },
+    { "id": "b-rijk",           "hoofdstuk": "h8", "term": "Rijk",           "definitie": "Hoogste indeling van organismen, bv. planten, dieren, schimmels, bacteriën.", "tags": ["ordening"] },
+    { "id": "b-gewerveld",      "hoofdstuk": "h8", "term": "Gewerveld dier", "definitie": "Dier met een ruggengraat (vissen, amfibieën, reptielen, vogels, zoogdieren).", "tags": ["ordening", "dier"] },
+    { "id": "b-ongewerveld",    "hoofdstuk": "h8", "term": "Ongewerveld dier","definitie": "Dier zonder ruggengraat (bv. insecten, weekdieren, wormen).", "tags": ["ordening", "dier"] },
+    { "id": "b-insect",         "hoofdstuk": "h8", "term": "Insect",         "definitie": "Ongewerveld dier met 6 poten, een lichaam in 3 delen en meestal vleugels.", "tags": ["dier"] }
+  ],
+  "feiten": [
+    { "id": "f-plantvsdier-cel", "hoofdstuk": "h5", "feit": "Plantencellen hebben een celwand, vacuole en bladgroenkorrels; dierlijke cellen niet.", "tags": ["vergelijking"] },
+    { "id": "f-foto-formule",    "hoofdstuk": "h6", "feit": "Fotosynthese: koolstofdioxide + water →(licht, bladgroen)→ glucose + zuurstof.", "tags": ["fotosynthese"] },
+    { "id": "f-verbr-formule",   "hoofdstuk": "h6", "feit": "Verbranding: glucose + zuurstof → koolstofdioxide + water + energie.", "tags": ["verbranding"] },
+    { "id": "f-foto-overdag",    "hoofdstuk": "h6", "feit": "Planten doen alleen overdag fotosynthese, maar ademen (verbranden) dag én nacht.", "tags": ["fotosynthese", "verbranding"] },
+    { "id": "f-pijl-energie",    "hoofdstuk": "h7", "feit": "In een voedselketen wijst de pijl van de gegetene naar de eter (richting van de energie).", "tags": ["voedselketen"] },
+    { "id": "f-insect-6poten",   "hoofdstuk": "h8", "feit": "Insecten hebben altijd 6 poten; spinnen hebben er 8 en zijn geen insecten.", "tags": ["insect"] }
+  ],
+  "verbanden": [
+    {
+      "id": "v-foto-verbranding",
+      "hoofdstuk": "h6",
+      "titel": "Fotosynthese ↔ Verbranding",
+      "uitleg": "Fotosynthese en verbranding zijn elkaars omgekeerde processen. De producten van het ene zijn de grondstoffen van het andere. Daardoor blijven CO₂ en O₂ in een ecosysteem in evenwicht.",
+      "betreft": ["b-fotosynthese", "b-verbranding", "b-mitochondrium", "b-chloroplast"]
+    },
+    {
+      "id": "v-cel-orgaan",
+      "hoofdstuk": "h5",
+      "titel": "Van cel naar organisme",
+      "uitleg": "Cellen vormen samen weefsels, weefsels vormen organen, organen vormen orgaanstelsels, en die vormen samen een organisme. Dit heet de organisatieniveaus.",
+      "betreft": ["b-cel", "b-weefsel", "b-orgaan"]
+    },
+    {
+      "id": "v-producent-foto",
+      "hoofdstuk": "h7",
+      "titel": "Producenten zijn de basis van elke voedselketen",
+      "uitleg": "Alleen producenten (planten) kunnen via fotosynthese zonne-energie vastleggen. Consumenten halen die energie uit voedsel. Zonder producenten geen voedselketen.",
+      "betreft": ["b-producent", "b-fotosynthese", "b-voedselketen"]
+    },
+    {
+      "id": "v-reducent-kringloop",
+      "hoofdstuk": "h7",
+      "titel": "Reducenten sluiten de kringloop",
+      "uitleg": "Reducenten breken dode planten en dieren af tot mineralen, die planten via hun wortels weer opnemen. Zo blijven stoffen in het ecosysteem rondgaan.",
+      "betreft": ["b-reducent", "b-producent", "b-wortel"]
+    }
+  ],
+  "vragen": [
+    {
+      "id": "q-001", "hoofdstuk": "h5", "type": "mc", "moeilijkheid": "makkelijk",
+      "vraag": "In welk onderdeel van de cel ligt het DNA?",
+      "opties": ["Celmembraan", "Cytoplasma", "Celkern", "Mitochondrium"],
+      "antwoord_index": 2,
+      "uitleg": "Het DNA met de erfelijke informatie zit in de celkern."
+    },
+    {
+      "id": "q-002", "hoofdstuk": "h5", "type": "mc", "moeilijkheid": "makkelijk",
+      "vraag": "Welke onderdelen vind je WEL in een plantencel maar NIET in een dierlijke cel?",
+      "opties": ["Celkern en mitochondrium", "Celwand, vacuole en bladgroenkorrels", "Celmembraan en cytoplasma", "Ribosomen en celkern"],
+      "antwoord_index": 1,
+      "uitleg": "Celwand, vacuole en bladgroenkorrels zijn typisch voor plantencellen."
+    },
+    {
+      "id": "q-003", "hoofdstuk": "h5", "type": "mc", "moeilijkheid": "gemiddeld",
+      "vraag": "Wat is de juiste volgorde van klein naar groot in de organisatieniveaus?",
+      "opties": ["Orgaan → weefsel → cel", "Cel → orgaan → weefsel", "Cel → weefsel → orgaan", "Weefsel → cel → orgaan"],
+      "antwoord_index": 2,
+      "uitleg": "Cellen vormen weefsels, weefsels vormen organen."
+    },
+    {
+      "id": "q-004", "hoofdstuk": "h5", "type": "open", "moeilijkheid": "gemiddeld",
+      "vraag": "Wat is het verschil tussen een weefsel en een orgaan?",
+      "antwoord": "Een weefsel is een groep cellen met dezelfde vorm en functie. Een orgaan bestaat uit verschillende weefsels die samen één taak uitvoeren.",
+      "kernwoorden": ["weefsel", "cellen", "zelfde functie", "orgaan", "verschillende weefsels", "taak"]
+    },
+
+    {
+      "id": "q-101", "hoofdstuk": "h6", "type": "mc", "moeilijkheid": "makkelijk",
+      "vraag": "Welke stoffen heeft een plant nodig voor fotosynthese?",
+      "opties": ["Glucose en zuurstof", "Koolstofdioxide en water", "Stikstof en water", "Zuurstof en mineralen"],
+      "antwoord_index": 1,
+      "uitleg": "CO₂ (via huidmondjes) en water (via wortels) zijn de grondstoffen; licht is de energiebron."
+    },
+    {
+      "id": "q-102", "hoofdstuk": "h6", "type": "open", "moeilijkheid": "gemiddeld",
+      "vraag": "Schrijf het woordschema van fotosynthese op.",
+      "antwoord": "koolstofdioxide + water —(licht, bladgroen)→ glucose + zuurstof",
+      "kernwoorden": ["koolstofdioxide", "water", "licht", "glucose", "zuurstof"]
+    },
+    {
+      "id": "q-103", "hoofdstuk": "h6", "type": "inzicht", "moeilijkheid": "lastig",
+      "vraag": "Leg uit waarom een plant 's nachts juist zuurstof verbruikt, terwijl hij overdag zuurstof afgeeft.",
+      "antwoord": "Overdag is er licht, dus de plant doet fotosynthese: hij maakt glucose en geeft zuurstof af. De verbranding (in de mitochondriën) gaat dag en nacht door en gebruikt juist zuurstof. Overdag is de fotosynthese groter dan de verbranding, dus netto komt er zuurstof vrij. 's Nachts stopt de fotosynthese, maar de verbranding gaat door — dus dan verbruikt de plant netto zuurstof.",
+      "kernwoorden": ["fotosynthese", "licht", "verbranding", "dag en nacht", "netto"]
+    },
+    {
+      "id": "q-104", "hoofdstuk": "h6", "type": "inzicht", "moeilijkheid": "lastig",
+      "vraag": "Een tuinder zet 's nachts extra lampen aan in zijn kas. Welk biologisch proces stimuleert hij daarmee, en waarom groeien de planten dan harder? Gebruik in je antwoord de begrippen fotosynthese en glucose.",
+      "antwoord": "Hij stimuleert de fotosynthese, omdat planten daarvoor licht nodig hebben. Door 's nachts ook licht te geven, kan de plant langer doorgaan met fotosynthese en dus meer glucose maken. Die glucose is de bouwstof voor groei, dus de planten groeien harder.",
+      "kernwoorden": ["fotosynthese", "licht", "glucose", "bouwstof", "groei"]
+    },
+
+    {
+      "id": "q-201", "hoofdstuk": "h7", "type": "mc", "moeilijkheid": "makkelijk",
+      "vraag": "Wat is de juiste richting van een pijl in een voedselketen?",
+      "opties": ["Van de eter naar de gegetene", "Van de gegetene naar de eter", "Van groot naar klein", "Het maakt niet uit"],
+      "antwoord_index": 1,
+      "uitleg": "De pijl wijst in de richting waarin de energie gaat: van prooi naar eter."
+    },
+    {
+      "id": "q-202", "hoofdstuk": "h7", "type": "mc", "moeilijkheid": "gemiddeld",
+      "vraag": "Welke rol hebben schimmels en bacteriën in een ecosysteem?",
+      "opties": ["Producenten", "Consumenten van de eerste orde", "Roofdieren", "Reducenten"],
+      "antwoord_index": 3,
+      "uitleg": "Ze breken dode resten af tot mineralen, dat zijn reducenten."
+    },
+    {
+      "id": "q-203", "hoofdstuk": "h7", "type": "inzicht", "moeilijkheid": "lastig",
+      "vraag": "Leg uit waarom een ecosysteem niet zonder reducenten kan, ook al eten consumenten ze meestal niet.",
+      "antwoord": "Reducenten breken dode planten en dieren af tot mineralen. Zonder reducenten zouden die mineralen vastzitten in dode resten en niet meer beschikbaar zijn voor de producenten (planten). De planten zouden dan geen voedingsstoffen meer opnemen, waardoor uiteindelijk ook de consumenten zonder voedsel komen te zitten. Reducenten sluiten dus de kringloop.",
+      "kernwoorden": ["reducenten", "afbreken", "mineralen", "producenten", "kringloop"]
+    },
+    {
+      "id": "q-204", "hoofdstuk": "h7", "type": "open", "moeilijkheid": "gemiddeld",
+      "vraag": "Leg in eigen woorden uit wat het verschil is tussen een voedselketen en een voedselweb.",
+      "antwoord": "Een voedselketen is één rechte reeks van wie wie eet. Een voedselweb is een netwerk van meerdere voedselketens die met elkaar verbonden zijn, omdat de meeste dieren meer dan één soort voedsel eten.",
+      "kernwoorden": ["voedselketen", "reeks", "voedselweb", "netwerk", "meerdere"]
+    },
+
+    {
+      "id": "q-301", "hoofdstuk": "h8", "type": "mc", "moeilijkheid": "makkelijk",
+      "vraag": "Wat is een soort?",
+      "opties": [
+        "Alle dieren met dezelfde kleur",
+        "Een groep organismen die met elkaar vruchtbare nakomelingen krijgen",
+        "Alle organismen in hetzelfde gebied",
+        "Een groep organismen met dezelfde voeding"
+      ],
+      "antwoord_index": 1,
+      "uitleg": "Vruchtbare nakomelingen krijgen is de definitie van een soort."
+    },
+    {
+      "id": "q-302", "hoofdstuk": "h8", "type": "mc", "moeilijkheid": "gemiddeld",
+      "vraag": "Een spin is geen insect. Waarom niet?",
+      "opties": ["Hij heeft geen vleugels", "Hij heeft 8 poten in plaats van 6", "Hij is te klein", "Hij heeft een ruggengraat"],
+      "antwoord_index": 1,
+      "uitleg": "Insecten hebben 6 poten; spinnen hebben er 8 en zijn spinachtigen."
+    },
+    {
+      "id": "q-303", "hoofdstuk": "h8", "type": "inzicht", "moeilijkheid": "lastig",
+      "vraag": "Een paard en een ezel kunnen samen een muildier krijgen, maar muildieren zijn meestal onvruchtbaar. Horen paard en ezel tot dezelfde soort? Leg uit met de definitie van soort.",
+      "antwoord": "Nee. Volgens de definitie horen organismen alleen tot dezelfde soort als ze samen vruchtbare nakomelingen krijgen. Een muildier is onvruchtbaar, dus paard en ezel zijn twee verschillende soorten, ook al kunnen ze samen een nakomeling krijgen.",
+      "kernwoorden": ["vruchtbare nakomelingen", "definitie", "verschillende soorten", "onvruchtbaar"]
+    }
+  ]
+}
