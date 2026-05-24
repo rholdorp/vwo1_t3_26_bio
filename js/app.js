@@ -120,93 +120,17 @@
     view.querySelectorAll(".tile").forEach(t => t.onclick = () => go(t.dataset.go));
   };
 
-  // ---------- SVG loader (cache) ----------
-  const _svgCache = {};
-  // Versie-stamp: bump als de SVG's veranderen, dwingt browsers tot opnieuw ophalen.
-  const SVG_VERSION = "5";
-  const loadSvg = async (path) => {
-    if (!_svgCache[path]) {
-      const url = `${path}?v=${SVG_VERSION}`;
-      _svgCache[path] = fetch(url, { cache: "no-cache" }).then(r => {
-        if (!r.ok) throw new Error(`Kon ${path} niet laden (${r.status})`);
-        return r.text();
-      });
-    }
-    return _svgCache[path];
-  };
-
-  // Rendert één aanwijs-kaart in `host`. Geeft (grade) door aan onDone.
-  // grade: 2 = correct in één keer, 1 = correct na fout, 0 = opgegeven/fout
-  const renderAanwijsCard = async (host, it, onDone) => {
-    const svgText = await loadSvg(it.svg);
+  // ---------- SVG loader + aanwijs-renderer (gedeeld via Quiz) ----------
+  const renderAanwijsCard = async (host, a, onDone) => {
     host.innerHTML = `
       <div class="card aanwijs">
         <div class="row between" style="margin-bottom:8px">
-          <span class="chip">Aanwijzen · ${esc(Data.chapterTitle(content, it.hoofdstuk))}</span>
+          <span class="chip">Aanwijzen · ${esc(Data.chapterTitle(content, a.hoofdstuk))}</span>
         </div>
-        <h3 style="margin:4px 0 8px">${esc(it.vraag)}</h3>
-        ${it.hint ? `<p class="muted" style="margin:0 0 8px">💡 ${esc(it.hint)}</p>` : ""}
-        <div class="anat-wrap" id="anat-wrap">${svgText}</div>
-        <div id="anat-feedback" class="muted" style="margin-top:8px"></div>
-        <div id="anat-actions" class="row" style="margin-top:10px; justify-content:center"></div>
+        <h3 style="margin:4px 0 8px">${esc(a.vraag)}</h3>
       </div>`;
-    const wrap = host.querySelector("#anat-wrap");
-    const svg = wrap.querySelector("svg");
-    svg.classList.add("anat-svg");
-    const fb = host.querySelector("#anat-feedback");
-    const actions = host.querySelector("#anat-actions");
-
-    let attempts = 0;
-    let done = false;
-
-    const showActions = (grade) => {
-      actions.innerHTML = "";
-      const btnN = document.createElement("button");
-      btnN.className = "primary";
-      btnN.textContent = "Volgende →";
-      btnN.onclick = () => onDone(grade);
-      actions.appendChild(btnN);
-    };
-
-    svg.addEventListener("click", (e) => {
-      if (done) return;
-      const r = e.target.closest(".region");
-      if (!r) return;
-      attempts++;
-      const clicked = r.dataset.region;
-      if (clicked === it.region) {
-        done = true;
-        r.classList.add("correct");
-        fb.innerHTML = `✅ <b>Goed!</b> Dit is de <b>${esc(it.naam.toLowerCase())}</b>.` +
-          (attempts > 1 ? ` <span class="muted">(${attempts} pogingen)</span>` : "");
-        showActions(attempts === 1 ? 2 : 1);
-      } else if (attempts < 2) {
-        r.classList.add("wrong");
-        fb.innerHTML = `❌ Nog een keer proberen. Dat was niet de <b>${esc(it.naam.toLowerCase())}</b>.`;
-        setTimeout(() => r.classList.remove("wrong"), 900);
-      } else {
-        done = true;
-        r.classList.add("wrong");
-        const target = svg.querySelector(`.region[data-region="${it.region}"]`);
-        if (target) target.classList.add("hint");
-        fb.innerHTML = `❌ Het juiste antwoord (blauw) is de <b>${esc(it.naam.toLowerCase())}</b>.`;
-        showActions(0);
-      }
-    });
-
-    // "Ik weet het niet" knop
-    const giveUp = document.createElement("button");
-    giveUp.className = "ghost";
-    giveUp.textContent = "Toon antwoord";
-    giveUp.onclick = () => {
-      if (done) return;
-      done = true;
-      const target = svg.querySelector(`.region[data-region="${it.region}"]`);
-      if (target) target.classList.add("hint");
-      fb.innerHTML = `Het juiste antwoord (blauw) is de <b>${esc(it.naam.toLowerCase())}</b>.`;
-      showActions(0);
-    };
-    actions.appendChild(giveUp);
+    const card = host.querySelector(".card");
+    return Quiz.renderAanwijsInteractive(card, a, onDone);
   };
 
   // ---------- LEREN (flashcards) ----------
@@ -298,6 +222,65 @@
   };
 
   // ---------- AANWIJZEN (alleen botten/spieren-klik) ----------
+
+  // Synthetische vraag-pool: bestaande vragen + aanwijs-kaarten + begrip-MC's.
+  // Hierdoor kunnen Oefenen / Verbanden / Proeftoets dezelfde items hergebruiken
+  // alsof het gewone vragen zijn.
+  const aanwijsToQ = (a) => ({
+    id: "qa-" + a.id,
+    type: "aanwijs",
+    hoofdstuk: a.hoofdstuk,
+    moeilijkheid: "gemiddeld",
+    vraag: a.vraag,
+    aanwijs: a,
+  });
+
+  // Maak een MC-begripsvraag: óf term → kies de juiste definitie,
+  // óf definitie → kies de juiste term. Distractors uit hetzelfde hoofdstuk
+  // (of anders willekeurig).
+  const begripToQ = (b, idx) => {
+    const sameH = content.begrippen.filter(x => x.hoofdstuk === b.hoofdstuk && x.id !== b.id);
+    const others = content.begrippen.filter(x => x.id !== b.id);
+    const pickDistractors = (n) => {
+      const pool = (sameH.length >= n ? sameH : others).slice();
+      for (let k = pool.length - 1; k > 0; k--) {
+        const j = Math.floor(Math.random() * (k + 1));
+        [pool[k], pool[j]] = [pool[j], pool[k]];
+      }
+      return pool.slice(0, n);
+    };
+    const reverse = (idx % 2 === 1);
+    const distractors = pickDistractors(3);
+    let opties, antwoord_index, vraag;
+    if (reverse) {
+      vraag = `Welk begrip hoort bij deze definitie?\n\n"${b.definitie}"`;
+      opties = [b.term, ...distractors.map(d => d.term)];
+    } else {
+      vraag = `Welke definitie hoort bij het begrip "${b.term}"?`;
+      opties = [b.definitie, ...distractors.map(d => d.definitie)];
+    }
+    antwoord_index = 0;
+    return {
+      id: "qb-" + b.id,
+      type: "begrip",
+      hoofdstuk: b.hoofdstuk,
+      moeilijkheid: "makkelijk",
+      vraag,
+      opties,
+      antwoord_index,
+      afbeelding: b.afbeelding,
+      bron: b.bron,
+      uitleg: `Begrip uit ${Data.chapterTitle(content, b.hoofdstuk)}.`,
+    };
+  };
+
+  // Volledige pool: gewone vragen + aanwijs + begrip-MC's.
+  const expandedPool = () => [
+    ...content.vragen,
+    ...(content.aanwijzen || []).map(aanwijsToQ),
+    ...content.begrippen.map((b, i) => begripToQ(b, i)),
+  ];
+
   const renderAanwijzen = () => {
     subtitle.textContent = "Aanwijzen — klik op het juiste bot of de juiste spier";
     const cards = (content.aanwijzen || []).map(a => ({
@@ -353,7 +336,26 @@
     for (const b of content.begrippen) (byChap[b.hoofdstuk] ||= []).push(b);
 
     let html = `<div class="card"><h2>Begrippenlijst</h2>
-      <p class="muted">Snel opzoeken. Voor leren met spaced repetition: ga naar <b>Leren</b>.</p></div>`;
+      <p class="muted">Snel opzoeken. Voor leren met spaced repetition: ga naar <b>Leren</b>.
+      Voor MC-vragen (term ↔ definitie): klik <b>Toets begrippen</b> hieronder.</p>
+      <div class="row">
+        <label>Hoofdstuk:
+          <select id="bchap">
+            <option value="*">Alle hoofdstukken</option>
+            ${content.hoofdstukken.map(h => `<option value="${h.id}">${esc(h.titel)}</option>`).join("")}
+          </select>
+        </label>
+        <label>Aantal:
+          <select id="bcnt">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="0">alles</option>
+          </select>
+        </label>
+        <button class="primary" id="bquiz">Toets begrippen</button>
+      </div>
+      <div id="bquizHost" style="margin-top:14px"></div>
+    </div>`;
     for (const h of content.hoofdstukken) {
       const list = byChap[h.id] || [];
       if (!list.length) continue;
@@ -368,6 +370,21 @@
           </li>`).join("")}</ul></div>`;
     }
     view.innerHTML = html;
+
+    document.getElementById("bquiz").onclick = () => {
+      const ch = document.getElementById("bchap").value;
+      const cnt = parseInt(document.getElementById("bcnt").value, 10);
+      const pool = content.begrippen
+        .filter(b => ch === "*" || b.hoofdstuk === ch)
+        .map((b, i) => begripToQ(b, i));
+      if (!pool.length) {
+        document.getElementById("bquizHost").innerHTML = `<div class="card"><p>Geen begrippen.</p></div>`;
+        return;
+      }
+      const set = Quiz.shuffle(pool);
+      const limited = cnt > 0 ? set.slice(0, cnt) : set;
+      runQuiz(limited, document.getElementById("bquizHost"), { mode: "begrippen" });
+    };
   };
 
   // ---------- OEFENEN ----------
@@ -382,6 +399,7 @@
     view.innerHTML = `
       <div class="card">
         <h2>Oefenen</h2>
+        <p class="muted">Alle vraagtypes door elkaar: meerkeuze, open, inzicht, begrip-MC en aanwijs-vragen (botten/spieren).</p>
         <div class="row">
           <label>Hoofdstuk:
             <select id="chap">${chapterOptions}</select>
@@ -392,6 +410,8 @@
               <option value="mc">Meerkeuze</option>
               <option value="open">Open</option>
               <option value="inzicht">Inzicht</option>
+              <option value="begrip">Begrippen (MC)</option>
+              <option value="aanwijs">Aanwijzen (botten/spieren)</option>
             </select>
           </label>
           <label>Moeilijkheid:
@@ -400,6 +420,13 @@
               <option value="makkelijk">Makkelijk</option>
               <option value="gemiddeld">Gemiddeld</option>
               <option value="lastig">Lastig</option>
+            </select>
+          </label>
+          <label>Aantal:
+            <select id="cnt">
+              <option value="10">10</option>
+              <option value="20" selected>20</option>
+              <option value="0">alles</option>
             </select>
           </label>
           <button class="primary" id="start">Start oefenen</button>
@@ -412,14 +439,17 @@
       const ch = document.getElementById("chap").value;
       const tp = document.getElementById("type").value;
       const df = document.getElementById("diff").value;
-      const pool = content.vragen.filter(q =>
+      const cnt = parseInt(document.getElementById("cnt").value, 10);
+      const pool = expandedPool().filter(q =>
         (ch === "*" || q.hoofdstuk === ch) &&
         (tp === "*" || q.type === tp) &&
         (df === "*" || q.moeilijkheid === df)
       );
       if (!pool.length) { document.getElementById("quizHost").innerHTML =
         `<div class="card"><p>Geen vragen die hieraan voldoen.</p></div>`; return; }
-      runQuiz(Quiz.shuffle(pool), document.getElementById("quizHost"), { mode: "oefenen" });
+      const set = Quiz.shuffle(pool);
+      const limited = cnt > 0 ? set.slice(0, cnt) : set;
+      runQuiz(limited, document.getElementById("quizHost"), { mode: "oefenen" });
     };
   };
 
@@ -486,19 +516,36 @@
       </div>`;
     }
 
-    // Oefenronde: alle inzichtvragen (kruisverband-georiënteerd)
+    // Oefenronde: inzichtvragen + alle aanwijs- en begrip-items die bij een verband horen
     const inzicht = content.vragen.filter(q => q.type === "inzicht");
-    html += `<div class="card"><h3>Oefen inzichtvragen (${inzicht.length})</h3>
-      <p class="muted">Deze vragen toetsen kruisverbanden en begrip op VWO-niveau.</p>
+    const refIds = new Set(content.verbanden.flatMap(v => v.betreft || []));
+    const refTerms = new Set(
+      [...refIds].map(id => content.begrippen.find(b => b.id === id)?.term)
+                 .filter(Boolean)
+                 .map(t => t.toLowerCase())
+    );
+    const matchAanwijs = (content.aanwijzen || []).filter(a => {
+      const n = (a.naam || "").toLowerCase();
+      return [...refTerms].some(t => n.includes(t) || t.includes(n));
+    });
+    const matchBegrip = content.begrippen.filter(b => refIds.has(b.id));
+    const verbandPool = [
+      ...inzicht,
+      ...matchAanwijs.map(aanwijsToQ),
+      ...matchBegrip.map((b, i) => begripToQ(b, i)),
+    ];
+
+    html += `<div class="card"><h3>Oefen kruisverbanden (${verbandPool.length})</h3>
+      <p class="muted">Inzichtvragen + begrip-MC's en aanwijs-vragen van botten/spieren die in deze verbanden voorkomen.</p>
       <button class="primary" id="startV">Start</button></div>
       <div id="vHost"></div>`;
     view.innerHTML = html;
     document.getElementById("startV").onclick = () => {
-      if (!inzicht.length) {
-        document.getElementById("vHost").innerHTML = `<div class="card"><p>Geen inzichtvragen beschikbaar.</p></div>`;
+      if (!verbandPool.length) {
+        document.getElementById("vHost").innerHTML = `<div class="card"><p>Geen oefenvragen beschikbaar.</p></div>`;
         return;
       }
-      runQuiz(Quiz.shuffle(inzicht), document.getElementById("vHost"), { mode: "verbanden" });
+      runQuiz(Quiz.shuffle(verbandPool), document.getElementById("vHost"), { mode: "verbanden" });
     };
   };
 
@@ -540,22 +587,37 @@
     };
   };
 
-  // Stelt een gemixte set samen: ~40% MC, ~35% open, ~25% inzicht, verdeeld over hoofdstukken.
+  // Stelt een gemixte set samen: ~30% MC, ~25% open, ~20% inzicht,
+  // ~15% aanwijs (botten/spieren), ~10% begrip — zoals een echt proefwerk
+  // dat alle stof toetst.
   const buildToets = (n) => {
-    const mc      = Quiz.shuffle(content.vragen.filter(q => q.type === "mc"));
-    const open    = Quiz.shuffle(content.vragen.filter(q => q.type === "open"));
-    const inzicht = Quiz.shuffle(content.vragen.filter(q => q.type === "inzicht"));
+    const all = expandedPool();
+    const mc      = Quiz.shuffle(all.filter(q => q.type === "mc"));
+    const open    = Quiz.shuffle(all.filter(q => q.type === "open"));
+    const inzicht = Quiz.shuffle(all.filter(q => q.type === "inzicht"));
+    const aanwijs = Quiz.shuffle(all.filter(q => q.type === "aanwijs"));
+    const begrip  = Quiz.shuffle(all.filter(q => q.type === "begrip"));
     const want = {
-      mc:      Math.round(n * 0.40),
-      open:    Math.round(n * 0.35),
-      inzicht: n - Math.round(n * 0.40) - Math.round(n * 0.35),
+      mc:      Math.round(n * 0.30),
+      open:    Math.round(n * 0.25),
+      inzicht: Math.round(n * 0.20),
+      aanwijs: Math.round(n * 0.15),
+      begrip:  0,
     };
+    want.begrip = n - want.mc - want.open - want.inzicht - want.aanwijs;
     const take = (arr, k) => arr.slice(0, Math.min(k, arr.length));
-    let pick = [...take(mc, want.mc), ...take(open, want.open), ...take(inzicht, want.inzicht)];
+    let pick = [
+      ...take(mc, want.mc),
+      ...take(open, want.open),
+      ...take(inzicht, want.inzicht),
+      ...take(aanwijs, want.aanwijs),
+      ...take(begrip, want.begrip),
+    ];
 
     // Aanvullen als er te weinig in een categorie zat
     if (pick.length < n) {
-      const rest = Quiz.shuffle(content.vragen.filter(q => !pick.includes(q)));
+      const used = new Set(pick.map(p => p.id));
+      const rest = Quiz.shuffle(all.filter(q => !used.has(q.id)));
       pick = pick.concat(rest.slice(0, n - pick.length));
     }
     return Quiz.shuffle(pick);
@@ -599,9 +661,11 @@
             <span class="meta">${idx + 1}. ${esc(Data.chapterTitle(content, r.q.hoofdstuk))} · ${r.q.type}</span>
             <div style="margin-top:4px"><b>${esc(r.q.vraag)}</b></div>
             <div class="muted" style="margin-top:4px">
-              ${r.q.type === "mc"
+              ${r.q.type === "mc" || r.q.type === "begrip"
                 ? "Goede optie: " + esc(r.q.opties[r.q.antwoord_index])
-                : "Modelantwoord: " + esc(r.q.antwoord)}
+                : r.q.type === "aanwijs"
+                  ? "Juiste regio: " + esc(r.q.aanwijs.naam)
+                  : "Modelantwoord: " + esc(r.q.antwoord)}
             </div>
           </li>`).join("")}
         </ul>
