@@ -2237,39 +2237,13 @@
   ],
   "aanwijzen": [
     {
-      "id": "a-voorhoofd",
-      "hoofdstuk": "h51",
-      "svg": "img/anatomy/skelet.svg",
-      "region": "r-voorhoofdsbeen",
-      "naam": "Voorhoofdsbeen",
-      "vraag": "Klik op het voorhoofdsbeen.",
-      "hint": "Boven aan de schedel."
-    },
-    {
-      "id": "a-wandbeen",
-      "hoofdstuk": "h51",
-      "svg": "img/anatomy/skelet.svg",
-      "region": "r-wandbeen",
-      "naam": "Wandbeen",
-      "vraag": "Klik op het wandbeen.",
-      "hint": "Zijkant van de schedel."
-    },
-    {
       "id": "a-schedel",
       "hoofdstuk": "h51",
       "svg": "img/anatomy/skelet.svg",
       "region": "r-schedel",
-      "naam": "Schedel (overig)",
-      "vraag": "Klik op het overige deel van de schedel (rond de ogen)."
-    },
-    {
-      "id": "a-bovenkaak",
-      "hoofdstuk": "h51",
-      "svg": "img/anatomy/skelet.svg",
-      "region": "r-bovenkaak",
-      "naam": "Bovenkaak",
-      "vraag": "Klik op de bovenkaak.",
-      "hint": "Het vaste kaakbot."
+      "naam": "Schedel",
+      "vraag": "Klik op de schedel.",
+      "hint": "Bovenste deel van het hoofd."
     },
     {
       "id": "a-onderkaak",

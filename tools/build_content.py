@@ -664,10 +664,7 @@ SPIEREN_SVG = "img/anatomy/spieren.svg"
 # Lijst: (id, svg, region-id, naam, vraag, hoofdstuk, hint)
 AANWIJZEN_RAW = [
     # --- Botten op het skelet (5.1 / 5.3) ---
-    ("a-voorhoofd",    SKELET_SVG, "r-voorhoofdsbeen", "Voorhoofdsbeen", "Klik op het voorhoofdsbeen.", "h51", "Boven aan de schedel."),
-    ("a-wandbeen",     SKELET_SVG, "r-wandbeen",       "Wandbeen",       "Klik op het wandbeen.", "h51", "Zijkant van de schedel."),
-    ("a-schedel",      SKELET_SVG, "r-schedel",        "Schedel (overig)", "Klik op het overige deel van de schedel (rond de ogen).", "h51", None),
-    ("a-bovenkaak",    SKELET_SVG, "r-bovenkaak",      "Bovenkaak",      "Klik op de bovenkaak.", "h51", "Het vaste kaakbot."),
+    ("a-schedel",      SKELET_SVG, "r-schedel",        "Schedel",        "Klik op de schedel.", "h51", "Bovenste deel van het hoofd."),
     ("a-onderkaak",    SKELET_SVG, "r-onderkaak",      "Onderkaak",      "Klik op de onderkaak.", "h51", "Het beweegbare kaakbot."),
     ("a-halswervels",  SKELET_SVG, "r-halswervels",    "Halswervels",    "Klik op de halswervels.", "h51", "Bovenste deel van de wervelkolom."),
     ("a-sleutelbeen",  SKELET_SVG, "r-sleutelbeen",    "Sleutelbeen",    "Klik op het sleutelbeen.", "h51", "Onderdeel van de schoudergordel, vooraan."),
