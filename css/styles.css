@@ -164,9 +164,12 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 16px 0; }
 .anat-svg .region:hover .bone   { fill:#fef9c3; }
 .anat-svg .region:hover .muscle { fill:#fde68a; }
 .anat-svg .region.correct .bone,
-.anat-svg .region.correct .muscle { fill:#bbf7d0; stroke:#16a34a; stroke-width:2; }
+.anat-svg .region.correct .muscle,
+.anat-svg .region.correct .pees   { fill:#bbf7d0; stroke:#16a34a; stroke-width:2; }
 .anat-svg .region.wrong .bone,
-.anat-svg .region.wrong .muscle   { fill:#fecaca; stroke:#dc2626; stroke-width:2; }
+.anat-svg .region.wrong .muscle,
+.anat-svg .region.wrong .pees     { fill:#fecaca; stroke:#dc2626; stroke-width:2; }
 .anat-svg .region.hint .bone,
-.anat-svg .region.hint .muscle    { fill:#bfdbfe; stroke:#2563eb; stroke-width:2; }
+.anat-svg .region.hint .muscle,
+.anat-svg .region.hint .pees      { fill:#bfdbfe; stroke:#2563eb; stroke-width:2; }
 .card.aanwijs h3 { font-size: 1.05rem; }

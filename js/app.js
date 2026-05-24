@@ -122,9 +122,12 @@
 
   // ---------- SVG loader (cache) ----------
   const _svgCache = {};
+  // Versie-stamp: bump als de SVG's veranderen, dwingt browsers tot opnieuw ophalen.
+  const SVG_VERSION = "5";
   const loadSvg = async (path) => {
     if (!_svgCache[path]) {
-      _svgCache[path] = fetch(path, { cache: "force-cache" }).then(r => {
+      const url = `${path}?v=${SVG_VERSION}`;
+      _svgCache[path] = fetch(url, { cache: "no-cache" }).then(r => {
         if (!r.ok) throw new Error(`Kon ${path} niet laden (${r.status})`);
         return r.text();
       });
