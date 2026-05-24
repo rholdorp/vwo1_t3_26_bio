@@ -59,7 +59,6 @@
     const allLearnIds = [
       ...content.begrippen.map(b => "b:" + b.id),
       ...content.feiten.map(f => "f:" + f.id),
-      ...(content.aanwijzen || []).map(a => "a:" + a.id),
     ];
     const s = SRS.stats(allLearnIds);
 
@@ -81,11 +80,11 @@
       <div class="grid">
         <div class="tile" data-go="leren">
           <h3>🃏 Leren (flashcards)</h3>
-          <p>Begrippen + feiten + aanwijs-kaarten met slim herhaalsysteem (SR). Begin hier.</p>
+          <p>Begrippen + feiten met slim herhaalsysteem (SR). Begin hier.</p>
         </div>
         <div class="tile" data-go="aanwijzen">
           <h3>🦴 Aanwijzen</h3>
-          <p>Klik op het juiste bot of de juiste spier op een interactief plaatje.</p>
+          <p>Klik op het juiste bot of de juiste spier — botten en spieren door elkaar.</p>
         </div>
         <div class="tile" data-go="begrippen">
           <h3>📖 Begrippenlijst</h3>
@@ -211,20 +210,24 @@
   const renderLeren = () => {
     subtitle.textContent = "Leren — flashcards met spaced repetition";
 
+    // Botten en spieren die in Aanwijzen al getoetst worden, niet in de tekst-flashcards.
+    const norm = (s) => (s || "").toLowerCase().replace(/\(.*?\)/g, "").replace(/[^a-zà-ÿ]/g, "").trim();
+    const aanwijsNamen = new Set((content.aanwijzen || []).map(a => norm(a.naam)));
+    const isBotOfSpierBegrip = (b) =>
+      aanwijsNamen.has(norm(b.term)) || (b.term || "").split(/[ /(]/).some(w => aanwijsNamen.has(norm(w)));
+
     const items = [
-      ...content.begrippen.map(b => ({
-        id: "b:" + b.id, hoofdstuk: b.hoofdstuk, kind: "Begrip",
-        front: b.term, back: b.definitie,
-        afbeelding: b.afbeelding, bron: b.bron,
-      })),
+      ...content.begrippen
+        .filter(b => !isBotOfSpierBegrip(b))
+        .map(b => ({
+          id: "b:" + b.id, hoofdstuk: b.hoofdstuk, kind: "Begrip",
+          front: b.term, back: b.definitie,
+          afbeelding: b.afbeelding, bron: b.bron,
+        })),
       ...content.feiten.map(f => ({
         id: "f:" + f.id, hoofdstuk: f.hoofdstuk, kind: "Feit",
         front: "Feit (" + Data.chapterTitle(content, f.hoofdstuk) + ")",
         back: f.feit, afbeelding: f.afbeelding,
-      })),
-      ...(content.aanwijzen || []).map(a => ({
-        id: "a:" + a.id, hoofdstuk: a.hoofdstuk, kind: "Aanwijzen",
-        aanwijs: a,
       })),
     ];
     const byId = Object.fromEntries(items.map(i => [i.id, i]));
@@ -248,20 +251,6 @@
         return;
       }
       const it = byId[order[i]];
-      if (it.kind === "Aanwijzen") {
-        const wrapper = document.createElement("div");
-        view.innerHTML = `
-          <div class="row between" style="margin-bottom:10px">
-            <span class="muted">${i + 1} / ${order.length}</span>
-          </div>`;
-        view.appendChild(wrapper);
-        renderAanwijsCard(wrapper, it.aanwijs, (grade) => {
-          SRS.review(it.id, grade);
-          i++;
-          renderCard();
-        }).catch(e => showError(e.message));
-        return;
-      }
       view.innerHTML = `
         <div class="row between" style="margin-bottom:10px">
           <span class="chip">${it.kind} · ${esc(Data.chapterTitle(content, it.hoofdstuk))}</span>
@@ -316,11 +305,18 @@
       return;
     }
     const byId = Object.fromEntries(cards.map(c => [c.id, c]));
-    let order = SRS.dueItems(cards.map(c => c.id));
-    if (order.length === 0) {
-      // niets due → doe gewoon een ronde door alles in willekeurige volgorde
-      order = cards.map(c => c.id).sort(() => Math.random() - 0.5);
-    }
+    // Door elkaar: botten en spieren mengen. We pakken de due-items volgens SRS,
+    // maar shuffelen die altijd zodat skelet- en spierkaarten elkaar afwisselen.
+    const shuffle = (arr) => {
+      const a = arr.slice();
+      for (let k = a.length - 1; k > 0; k--) {
+        const j = Math.floor(Math.random() * (k + 1));
+        [a[k], a[j]] = [a[j], a[k]];
+      }
+      return a;
+    };
+    let order = shuffle(SRS.dueItems(cards.map(c => c.id)));
+    if (order.length === 0) order = shuffle(cards.map(c => c.id));
     let i = 0;
     const next = () => {
       if (i >= order.length) {
