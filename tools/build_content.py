@@ -533,6 +533,128 @@ q_inz("qX06", "h51",
       ["stevigheid", "bescherming", "beweging", "borstbeen", "wervels", "doorslikken"],
       "lastig", afbeelding=p("101740664"))
 
+# ===== Extra vragen over de nieuwe begrippen ================================
+
+# --- Fontanellen ---
+q_mc("qF01", "h52",
+     "Wat zijn fontanellen?",
+     ["Holtes in volwassen schedelbotten",
+      "Open plekken op de schedel van een baby, gevuld met bindweefsel",
+      "Kraakbeenschijfjes tussen de wervels",
+      "Naden tussen de schedelbotten van een volwassene"],
+     1,
+     "Fontanellen zijn de plekken op de schedel van een baby waar de botten nog niet aan elkaar gegroeid zijn.")
+
+q_inz("qF02", "h52",
+      "Geef twee redenen waarom het handig is dat een baby fontanellen heeft.",
+      "1) Bij de geboorte kan het hoofd een beetje vervormen doordat de schedelbotten over elkaar kunnen schuiven; daardoor past het hoofd door het geboortekanaal. 2) De hersenen groeien in het eerste levensjaar snel; doordat de schedelbotten nog niet aan elkaar zitten, kan de schedel meegroeien met de hersenen.",
+      ["geboorte", "vervorm", "hersenen", "groeien", "ruimte"])
+
+# --- Zadelgewricht / duim ---
+q_mc("qZ01", "h53",
+     "In de duim van een mens zit een gewricht waardoor je je duim álle andere vingers kunt laten aanraken (opponeren). Welk type gewricht is dit?",
+     ["Kogelgewricht", "Scharniergewricht", "Rolgewricht", "Zadelgewricht"],
+     3,
+     "Het zadelgewricht maakt beweging in twee richtingen mogelijk — net genoeg om te opponeren.")
+
+q_inz("qZ02", "h53",
+      "In de duim zit een zadelgewricht en in de andere vingerkootjes scharniergewrichten. Welke beweging kan jouw duim daardoor wel maken, en de andere vingers niet?",
+      "Doordat een zadelgewricht in twee richtingen kan bewegen, kan de duim niet alleen buigen/strekken, maar zich ook naar de handpalm toe draaien om de andere vingertoppen aan te raken (opponeren). De andere vingers hebben alleen scharniergewrichten en kunnen daardoor alléén buigen en strekken in één vlak.",
+      ["zadelgewricht", "opponeren", "twee richtingen", "scharnier", "buigen", "strekken"])
+
+# --- Achillespees & antagonisten ---
+q_inz("qA01", "h54",
+      "De achillespees verbindt de kuitspier met de hiel. Leg uit waarom je je voet niet meer naar beneden kunt bewegen als de achillespees helemaal afscheurt.",
+      "De kuitspier trekt — via de achillespees — aan het hielbot om de voet naar beneden te bewegen (op je tenen staan). Als de achillespees afscheurt, is de verbinding tussen kuitspier en hiel weg: de kuitspier schiet omhoog en de kracht komt niet meer bij het bot. De spier kan dus wel samentrekken, maar dat heeft geen effect op de voet meer.",
+      ["achillespees", "kuitspier", "hiel", "verbinding", "afscheuren", "kracht"])
+
+q_mc("qA02", "h54",
+     "De scheenbeenspier is duidelijk dunner dan de kuitspier, terwijl ze allebei deel zijn van hetzelfde antagonistische paar. Wat is de beste verklaring?",
+     ["De scheenbeenspier hoeft minder kracht te leveren, want hij hoeft alleen tegen het gewicht van de voet in te werken; de kuitspier moet het hele lichaamsgewicht omhoog tillen bij op je tenen staan.",
+      "De scheenbeenspier bestaat uit glad spierweefsel en is daardoor altijd dunner.",
+      "De scheenbeenspier werkt onbewust en hoeft daarom minder spiervezels te hebben.",
+      "De scheenbeenspier is geen antagonist en doet daarom geen krachtwerk."],
+     0,
+     "Hoeveel kracht een spier moet leveren bepaalt vooral hoe dik (hoeveel spiervezels) hij is.")
+
+# --- Actine + myosine ---
+q_open("qM01", "h54",
+       "Leg in eigen woorden uit hoe een spier samentrekt op het niveau van de eiwitten actine en myosine.",
+       "In een spierfibril zitten twee soorten eiwitdraden naast elkaar: actine en myosine. Bij het samentrekken schuiven deze draden langs elkaar in elkaar, waardoor de fibril (en dus de spier) korter en dikker wordt. Hoe meer spiervezels dit tegelijk doen, hoe meer kracht de spier zet.",
+       ["actine", "myosine", "spierfibril", "schuiven", "in elkaar", "korter", "dikker"])
+
+# --- Tussenribspieren ---
+q_mc("qT01", "h54",
+     "Tussenribspieren gebruik je bij het ademen. Uit welk type spierweefsel bestaan ze?",
+     ["Glad spierweefsel", "Hartspierweefsel", "Dwarsgestreept spierweefsel", "Kraakbeenweefsel"],
+     2,
+     "Ze hebben dezelfde bouw als skeletspieren (dwarsgestreept), ook al werken ze meestal onbewust.")
+
+q_inz("qT02", "h54",
+      "Tussenribspieren bestaan uit dwarsgestreept spierweefsel, maar worden tóch ingedeeld bij de onwillekeurige (onbewuste) spieren. Leg dat uit.",
+      "Dwarsgestreept spierweefsel kún je in principe bewust aansturen, maar ademhaling gebeurt het grootste deel van de tijd vanzelf, zonder dat je erbij nadenkt (anders zou je stoppen met ademen als je in slaap valt). Daarom worden de tussenribspieren bij de onwillekeurige spieren gerekend — vanwege wat ze doen, niet vanwege hun bouw.",
+      ["dwarsgestreept", "ademhaling", "bewust", "onbewust", "slaap", "onwillekeurig"])
+
+# --- Vier beenverbindingen + voorbeelden ---
+q_mc("qV01", "h53",
+     "Welke vier manieren zijn er om botten met elkaar te verbinden?",
+     ["spier — pees — band — kraakbeen",
+      "vergroeid — naad — kraakbeen — gewricht",
+      "kogelgewricht — rolgewricht — scharniergewricht — schuifgewricht",
+      "vergroeid — gewricht — spier — kraakbeen"],
+     1,
+     "Vier verbindings­typen: vergroeid, naad, kraakbeen, gewricht. Daarbinnen heb je nog de vier typen gewrichten.")
+
+q_open("qV02", "h53",
+       "Geef bij elk van de vier verbindings­typen één voorbeeld in het menselijk lichaam.",
+       "Vergroeid: de wervels van het heiligbeen (of staartbeen). Naad: tussen de schedelbotten van een volwassene. Kraakbeen: tussen de ribben en het borstbeen (of tussen de wervels). Gewricht: de heup (kogelgewricht), de knie (scharniergewricht), de elleboog (scharnier + rolgewricht), enz.",
+       ["heiligbeen", "schedel", "ribben", "borstbeen", "heup", "knie"])
+
+# --- Botvlies + bouw bot ---
+q_mc("qB01", "h52",
+     "Wat is de functie van het botvlies?",
+     ["Het vormt nieuwe bloedcellen.",
+      "Het is een dun, taai vlies om de buitenkant van het bot dat onder andere zorgt voor groei en herstel; er lopen bloedvaten en zenuwen in.",
+      "Het is een laag kraakbeen op de gewrichtskogel.",
+      "Het is een soort smeervet binnenin de mergholte."],
+     1)
+
+# --- Bewust vs onbewust + drie spierweefsels ---
+q_mc("qS01", "h54",
+     "Welke combinatie klopt?",
+     ["Glad spierweefsel — bewust — in skeletspieren",
+      "Dwarsgestreept spierweefsel — bewust — in skeletspieren",
+      "Hartspierweefsel — bewust — in het hart",
+      "Glad spierweefsel — onbewust — in het hart"],
+     1)
+
+# --- Vitamine D + calcium + osteoporose (cross-connection) ---
+q_inz("qC01", "h52",
+      "Astronauten die lang in een ruimtestation verblijven, krijgen vaak zwakkere botten. Geef twee mogelijke oorzaken die je kunt verklaren met wat je hebt geleerd over botvorming.",
+      "1) In de ruimte is er bijna geen zwaartekracht, waardoor de botten veel minder belast worden. Botcellen merken weinig beweging in de vloeistof om zich heen, waardoor er minder nieuw bot wordt aangemaakt en zelfs bot wordt afgebroken (vergelijkbaar met osteoporose). 2) Astronauten komen niet of nauwelijks aan zonlicht, dus maken ze minder vitamine D aan. Zonder vitamine D nemen ze ook minder calcium op, en zonder calcium kunnen de tussencelstof-kalkzouten in het bot niet goed worden aangevuld.",
+      ["zwaartekracht", "botcellen", "afgebroken", "vitamine D", "zonlicht", "calcium", "osteoporose"])
+
+# --- Cross-connection: skelet + spier + gewricht ---
+q_inz("qC02", "h54",
+      "Stijn wil één keer een kogel zo ver mogelijk wegstoten. Welke combinatie van bot, gewricht, type spier én type spiervezel kiest zijn lichaam voor deze beweging? Leg uit waarom.",
+      "Voor de stoot gebruikt hij vooral het opperarmbeen + spaakbeen/ellepijp; het belangrijkste gewricht is het kogelgewricht in zijn schouder (alle kanten op, dus optimaal voor wegstoten) plus het scharniergewricht in zijn elleboog. De spier die het laatste duwt is de triceps (strekspier). Omdat het maar één korte, krachtige beweging is, gebruikt zijn lichaam vooral snelle spiervezels: die leveren veel kracht in korte tijd, ook al raken ze snel vermoeid.",
+      ["kogelgewricht", "schouder", "scharnier", "elleboog", "triceps", "strekspier", "snelle spiervezels", "kracht"],
+      afbeelding=p("102104432"))
+
+# Extra verbanden (kruisverbanden) over de nieuwe stof
+v("v-fontan-groei", "h52", "Fontanellen + groeischijven: ruimte om te groeien",
+  "Een baby moet snel groeien — niet alleen in de lengte, maar ook in hoofdomvang. Daarom heeft het skelet van een kind twee 'open' constructies: fontanellen tussen de schedelbotten geven de hersenen ruimte om te groeien, en groeischijven van kraakbeen aan de uiteinden van pijpbeenderen laten botten in de lengte groeien. Bij een volwassene zijn beide gesloten/verbeend.",
+  ["b-fontanellen", "b-groeischijven", "b-skeletleeftijd"], GROEI_FOTO)
+
+v("v-tussenrib-paradox", "h54", "Tussenribspieren: bouw vs functie",
+  "Normaal gesproken hoort dwarsgestreept spierweefsel bij bewuste bewegingen, en glad bij onbewuste. Tussenribspieren zijn een uitzondering: ze zijn dwarsgestreept (zoals skeletspieren) maar werken meestal onbewust, want anders zou je ademhaling stoppen als je in slaap valt. Dit laat zien dat indeling op functie (willekeurig vs onwillekeurig) niet altijd samenvalt met indeling op bouw (dwarsgestreept vs glad).",
+  ["b-tussenribsp", "b-dwarsgestr", "b-glad", "b-bewust", "b-onbewust"], FSHD_PG)
+
+v("v-actine-myosine-vezels", "h54", "Eiwitten → fibrillen → vezels → kracht",
+  "Het samentrekken van een spier begint heel klein: actine- en myosine-eiwitten schuiven in elkaar in een spierfibril. Veel fibrillen zitten in één spiervezel, en hoe meer vezels tegelijk samentrekken, hoe meer kracht de hele spier zet. Of die kracht kort en hard (snelle vezels) of lang en gelijkmatig (langzame vezels) is, hangt af van het type vezel.",
+  ["b-actine-myo", "b-spierfibril", "b-spiervezel", "b-snelle-vez", "b-langz-vez"], SPIER_WEEFS)
+
+
 # ---------------------------------------------------------------------------
 # Aanwijs-kaarten: klik de juiste bot/spier aan op de interactieve SVG
 # ---------------------------------------------------------------------------
@@ -541,34 +663,47 @@ SPIEREN_SVG = "img/anatomy/spieren.svg"
 
 # Lijst: (id, svg, region-id, naam, vraag, hoofdstuk, hint)
 AANWIJZEN_RAW = [
-    # --- Botten op het skelet (5.1) ---
-    ("a-schedel",      SKELET_SVG, "r-schedel",      "Schedel",      "Klik op de schedel.", "h51", None),
-    ("a-onderkaak",    SKELET_SVG, "r-onderkaak",    "Onderkaak",    "Klik op de onderkaak.", "h51", None),
-    ("a-halswervels",  SKELET_SVG, "r-halswervels",  "Halswervels",  "Klik op de halswervels.", "h51", "Bovenste deel van de wervelkolom."),
-    ("a-sleutelbeen",  SKELET_SVG, "r-sleutelbeen",  "Sleutelbeen",  "Klik op het sleutelbeen.", "h51", "Onderdeel van de schoudergordel, vooraan."),
-    ("a-borstbeen",    SKELET_SVG, "r-borstbeen",    "Borstbeen",    "Klik op het borstbeen.", "h51", "Plat bot midden in de borstkas."),
-    ("a-ribben",       SKELET_SVG, "r-ribben",       "Ribben",       "Klik op de ribben.", "h51", None),
-    ("a-wervelkolom",  SKELET_SVG, "r-wervelkolom",  "Wervelkolom",  "Klik op de wervelkolom (lendenwervels).", "h51", "De wervels onder de ribben."),
-    ("a-opperarmbeen", SKELET_SVG, "r-opperarmbeen", "Opperarmbeen", "Klik op het opperarmbeen.", "h51", "Het bovenarmbot."),
-    ("a-spaakbeen",    SKELET_SVG, "r-spaakbeen",    "Spaakbeen",    "Klik op het spaakbeen (onderarm, duim-kant).", "h53", "Onderarmbot aan de buitenkant (duim-zijde)."),
-    ("a-ellepijp",     SKELET_SVG, "r-ellepijp",     "Ellepijp",     "Klik op de ellepijp (onderarm, pink-kant).", "h53", "Onderarmbot aan de binnenkant (pink-zijde)."),
-    ("a-bekkengordel", SKELET_SVG, "r-bekkengordel", "Bekkengordel", "Klik op de bekkengordel (het bekken).", "h51", None),
-    ("a-dijbeen",      SKELET_SVG, "r-dijbeen",      "Dijbeen",      "Klik op het dijbeen.", "h51", "Het bot van je bovenbeen."),
-    ("a-kniebeen",     SKELET_SVG, "r-kniebeen",     "Kniebeen",     "Klik op het kniebeen (de knieschijf).", "h53", None),
-    ("a-scheenbeen",   SKELET_SVG, "r-scheenbeen",   "Scheenbeen",   "Klik op het scheenbeen (binnenkant van het onderbeen).", "h53", "Het dikke onderbeen-bot aan de voorkant."),
-    ("a-kuitbeen",     SKELET_SVG, "r-kuitbeen",     "Kuitbeen",     "Klik op het kuitbeen (buitenkant van het onderbeen).", "h53", "Het dunne onderbeen-bot, naast het scheenbeen."),
+    # --- Botten op het skelet (5.1 / 5.3) ---
+    ("a-voorhoofd",    SKELET_SVG, "r-voorhoofdsbeen", "Voorhoofdsbeen", "Klik op het voorhoofdsbeen.", "h51", "Boven aan de schedel."),
+    ("a-wandbeen",     SKELET_SVG, "r-wandbeen",       "Wandbeen",       "Klik op het wandbeen.", "h51", "Zijkant van de schedel."),
+    ("a-schedel",      SKELET_SVG, "r-schedel",        "Schedel (overig)", "Klik op het overige deel van de schedel (rond de ogen).", "h51", None),
+    ("a-bovenkaak",    SKELET_SVG, "r-bovenkaak",      "Bovenkaak",      "Klik op de bovenkaak.", "h51", "Het vaste kaakbot."),
+    ("a-onderkaak",    SKELET_SVG, "r-onderkaak",      "Onderkaak",      "Klik op de onderkaak.", "h51", "Het beweegbare kaakbot."),
+    ("a-halswervels",  SKELET_SVG, "r-halswervels",    "Halswervels",    "Klik op de halswervels.", "h51", "Bovenste deel van de wervelkolom."),
+    ("a-sleutelbeen",  SKELET_SVG, "r-sleutelbeen",    "Sleutelbeen",    "Klik op het sleutelbeen.", "h51", "Onderdeel van de schoudergordel, vooraan."),
+    ("a-schouderblad", SKELET_SVG, "r-schouderblad",   "Schouderblad",   "Klik op het schouderblad.", "h51", "Plat bot achter de schouder; deel van de schoudergordel."),
+    ("a-borstbeen",    SKELET_SVG, "r-borstbeen",      "Borstbeen",      "Klik op het borstbeen.", "h51", "Plat bot midden in de borstkas."),
+    ("a-ribben",       SKELET_SVG, "r-ribben",         "Ribben",         "Klik op de ribben.", "h51", None),
+    ("a-wervelkolom",  SKELET_SVG, "r-wervelkolom",    "Wervelkolom",    "Klik op de wervelkolom (lendenwervels).", "h51", "De wervels onder de ribben."),
+    ("a-opperarmbeen", SKELET_SVG, "r-opperarmbeen",   "Opperarmbeen",   "Klik op het opperarmbeen.", "h51", "Het bovenarmbot."),
+    ("a-spaakbeen",    SKELET_SVG, "r-spaakbeen",      "Spaakbeen",      "Klik op het spaakbeen (onderarm, duim-kant).", "h53", "Buitenkant van de onderarm."),
+    ("a-ellepijp",     SKELET_SVG, "r-ellepijp",       "Ellepijp",       "Klik op de ellepijp (onderarm, pink-kant).", "h53", "Binnenkant van de onderarm."),
+    ("a-handwortel",   SKELET_SVG, "r-handwortel",     "Handwortelbeentjes", "Klik op de handwortelbeentjes (pols).", "h51", "Acht kleine botjes in de pols."),
+    ("a-middenhand",   SKELET_SVG, "r-middenhand",     "Middenhandsbeentjes", "Klik op de middenhandsbeentjes.", "h51", "Tussen pols en vingers, in de handpalm."),
+    ("a-vingerkootjes",SKELET_SVG, "r-vingerkootjes",  "Vingerkootjes",  "Klik op de vingerkootjes.", "h51", "De botjes ván de vingers zelf."),
+    ("a-bekkengordel", SKELET_SVG, "r-bekkengordel",   "Bekkengordel",   "Klik op de bekkengordel (het bekken).", "h51", None),
+    ("a-dijbeen",      SKELET_SVG, "r-dijbeen",        "Dijbeen",        "Klik op het dijbeen.", "h51", "Het bot van je bovenbeen — het langste bot."),
+    ("a-kniebeen",     SKELET_SVG, "r-kniebeen",       "Kniebeen",       "Klik op het kniebeen (de knieschijf).", "h53", None),
+    ("a-scheenbeen",   SKELET_SVG, "r-scheenbeen",     "Scheenbeen",     "Klik op het scheenbeen (binnenkant van het onderbeen).", "h53", "Het dikke onderbeenbot."),
+    ("a-kuitbeen",     SKELET_SVG, "r-kuitbeen",       "Kuitbeen",       "Klik op het kuitbeen (buitenkant van het onderbeen).", "h53", "Het dunne onderbeenbot."),
+    ("a-voetwortel",   SKELET_SVG, "r-voetwortel",     "Voetwortelbeentjes", "Klik op de voetwortelbeentjes (wreef).", "h51", "Bovenkant van de voet, vlak achter de tenen-botjes."),
+    ("a-middenvoet",   SKELET_SVG, "r-middenvoet",     "Middenvoetsbeentjes", "Klik op de middenvoetsbeentjes.", "h51", "Tussen wreef en tenen."),
+    ("a-teenkootjes",  SKELET_SVG, "r-teenkootjes",    "Teenkootjes",    "Klik op de teenkootjes.", "h51", "De botjes ván de tenen."),
 
     # --- Spieren op het lichaam (5.4) ---
-    ("a-biceps",       SPIEREN_SVG, "m-biceps",                  "Biceps",                    "Klik op de biceps (buigspier van de bovenarm).", "h54", "Voorkant van de bovenarm."),
-    ("a-triceps",      SPIEREN_SVG, "m-triceps",                 "Triceps",                   "Klik op de triceps (strekspier van de bovenarm).", "h54", "Achterkant van de bovenarm."),
-    ("a-kuitspier",    SPIEREN_SVG, "m-kuitspier",               "Kuitspier",                 "Klik op de kuitspier.", "h54", "Achterkant van het onderbeen."),
-    ("a-scheenspier",  SPIEREN_SVG, "m-scheenbeenspier",         "Scheenbeenspier",           "Klik op de scheenbeenspier (antagonist van de kuitspier).", "h54", "Voorkant van het onderbeen."),
-    ("a-dijbeenspier", SPIEREN_SVG, "m-dijbeenspier",            "Voorste dijbeenspier",      "Klik op de voorste dijbeenspier (quadriceps).", "h54", "Voorkant van het bovenbeen."),
-    ("a-achterdij",    SPIEREN_SVG, "m-achterste-dijbeenspier",  "Achterste dijbeenspier",    "Klik op de achterste dijbeenspier (hamstring).", "h54", "Achterkant van het bovenbeen."),
-    ("a-borstspier",   SPIEREN_SVG, "m-borstspier",              "Borstspier",                "Klik op de borstspier.", "h54", None),
-    ("a-buikspieren",  SPIEREN_SVG, "m-buikspieren",             "Buikspieren",               "Klik op de buikspieren.", "h54", None),
-    ("a-rugspieren",   SPIEREN_SVG, "m-rugspieren",              "Rugspieren",                "Klik op de rugspieren.", "h54", "Op de rug — gebruik het achteraanzicht."),
-    ("a-bilspier",     SPIEREN_SVG, "m-bilspier",                "Bilspier",                  "Klik op de bilspier.", "h54", None),
+    ("a-biceps",        SPIEREN_SVG, "m-biceps",                 "Biceps",                  "Klik op de biceps (buigspier van de bovenarm).", "h54", "Voorkant van de bovenarm."),
+    ("a-triceps",       SPIEREN_SVG, "m-triceps",                "Triceps",                 "Klik op de triceps (strekspier van de bovenarm).", "h54", "Achterkant van de bovenarm."),
+    ("a-kuitspier",     SPIEREN_SVG, "m-kuitspier",              "Kuitspier",               "Klik op de kuitspier.", "h54", "Achterkant van het onderbeen."),
+    ("a-scheenspier",   SPIEREN_SVG, "m-scheenbeenspier",        "Scheenbeenspier",         "Klik op de scheenbeenspier (antagonist van de kuitspier).", "h54", "Voorkant van het onderbeen."),
+    ("a-dijbeenspier",  SPIEREN_SVG, "m-dijbeenspier",           "Voorste dijbeenspier",    "Klik op de voorste dijbeenspier (quadriceps).", "h54", "Voorkant van het bovenbeen."),
+    ("a-achterdij",     SPIEREN_SVG, "m-achterste-dijbeenspier", "Achterste dijbeenspier",  "Klik op de achterste dijbeenspier (hamstring).", "h54", "Achterkant van het bovenbeen."),
+    ("a-borstspier",    SPIEREN_SVG, "m-borstspier",             "Borstspier",              "Klik op de borstspier.", "h54", None),
+    ("a-buikspieren",   SPIEREN_SVG, "m-buikspieren",            "Buikspieren",             "Klik op de buikspieren.", "h54", None),
+    ("a-rugspieren",    SPIEREN_SVG, "m-rugspieren",             "Rugspieren",              "Klik op de rugspieren (onderrug).", "h54", "Achteraanzicht — onder de monnikskapspier."),
+    ("a-bilspier",      SPIEREN_SVG, "m-bilspier",               "Bilspier",                "Klik op de bilspier.", "h54", None),
+    ("a-monnikskap",    SPIEREN_SVG, "m-monnikskap",             "Monnikskapspier",         "Klik op de monnikskapspier.", "h54", "Ruitvormige spier in nek en bovenrug."),
+    ("a-tussenribspieren", SPIEREN_SVG, "m-tussenribspieren",    "Tussenribspieren",        "Klik op de tussenribspieren (helpen bij ademhalen).", "h54", "Smalle strookjes spier tússen de ribben."),
+    ("a-achillespees",  SPIEREN_SVG, "m-achillespees",           "Achillespees",            "Klik op de achillespees (verbindt kuitspier met hiel).", "h54", "Onder de kuitspier, in geel weergegeven."),
 ]
 
 AANWIJZEN = []

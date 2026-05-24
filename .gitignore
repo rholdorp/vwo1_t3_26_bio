@@ -10,3 +10,4 @@ raw/*.jpg
 raw/*.jpeg
 raw/*.png
 raw/*.heic
+.ocr/

@@ -1298,6 +1298,46 @@
         "b-orgaanspier"
       ],
       "afbeelding": "img/pages/PXL_20260524_102042676.jpg"
+    },
+    {
+      "id": "v-fontan-groei",
+      "hoofdstuk": "h52",
+      "titel": "Fontanellen + groeischijven: ruimte om te groeien",
+      "uitleg": "Een baby moet snel groeien — niet alleen in de lengte, maar ook in hoofdomvang. Daarom heeft het skelet van een kind twee 'open' constructies: fontanellen tussen de schedelbotten geven de hersenen ruimte om te groeien, en groeischijven van kraakbeen aan de uiteinden van pijpbeenderen laten botten in de lengte groeien. Bij een volwassene zijn beide gesloten/verbeend.",
+      "betreft": [
+        "b-fontanellen",
+        "b-groeischijven",
+        "b-skeletleeftijd"
+      ],
+      "afbeelding": "img/pages/PXL_20260524_101831251.jpg"
+    },
+    {
+      "id": "v-tussenrib-paradox",
+      "hoofdstuk": "h54",
+      "titel": "Tussenribspieren: bouw vs functie",
+      "uitleg": "Normaal gesproken hoort dwarsgestreept spierweefsel bij bewuste bewegingen, en glad bij onbewuste. Tussenribspieren zijn een uitzondering: ze zijn dwarsgestreept (zoals skeletspieren) maar werken meestal onbewust, want anders zou je ademhaling stoppen als je in slaap valt. Dit laat zien dat indeling op functie (willekeurig vs onwillekeurig) niet altijd samenvalt met indeling op bouw (dwarsgestreept vs glad).",
+      "betreft": [
+        "b-tussenribsp",
+        "b-dwarsgestr",
+        "b-glad",
+        "b-bewust",
+        "b-onbewust"
+      ],
+      "afbeelding": "img/pages/PXL_20260524_102109211.jpg"
+    },
+    {
+      "id": "v-actine-myosine-vezels",
+      "hoofdstuk": "h54",
+      "titel": "Eiwitten → fibrillen → vezels → kracht",
+      "uitleg": "Het samentrekken van een spier begint heel klein: actine- en myosine-eiwitten schuiven in elkaar in een spierfibril. Veel fibrillen zitten in één spiervezel, en hoe meer vezels tegelijk samentrekken, hoe meer kracht de hele spier zet. Of die kracht kort en hard (snelle vezels) of lang en gelijkmatig (langzame vezels) is, hangt af van het type vezel.",
+      "betreft": [
+        "b-actine-myo",
+        "b-spierfibril",
+        "b-spiervezel",
+        "b-snelle-vez",
+        "b-langz-vez"
+      ],
+      "afbeelding": "img/pages/PXL_20260524_102037810.jpg"
     }
   ],
   "vragen": [
@@ -1958,16 +1998,278 @@
         "doorslikken"
       ],
       "afbeelding": "img/pages/PXL_20260524_101740664.jpg"
+    },
+    {
+      "id": "qF01",
+      "hoofdstuk": "h52",
+      "type": "mc",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "Wat zijn fontanellen?",
+      "opties": [
+        "Holtes in volwassen schedelbotten",
+        "Open plekken op de schedel van een baby, gevuld met bindweefsel",
+        "Kraakbeenschijfjes tussen de wervels",
+        "Naden tussen de schedelbotten van een volwassene"
+      ],
+      "antwoord_index": 1,
+      "uitleg": "Fontanellen zijn de plekken op de schedel van een baby waar de botten nog niet aan elkaar gegroeid zijn."
+    },
+    {
+      "id": "qF02",
+      "hoofdstuk": "h52",
+      "type": "inzicht",
+      "moeilijkheid": "lastig",
+      "vraag": "Geef twee redenen waarom het handig is dat een baby fontanellen heeft.",
+      "antwoord": "1) Bij de geboorte kan het hoofd een beetje vervormen doordat de schedelbotten over elkaar kunnen schuiven; daardoor past het hoofd door het geboortekanaal. 2) De hersenen groeien in het eerste levensjaar snel; doordat de schedelbotten nog niet aan elkaar zitten, kan de schedel meegroeien met de hersenen.",
+      "kernwoorden": [
+        "geboorte",
+        "vervorm",
+        "hersenen",
+        "groeien",
+        "ruimte"
+      ]
+    },
+    {
+      "id": "qZ01",
+      "hoofdstuk": "h53",
+      "type": "mc",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "In de duim van een mens zit een gewricht waardoor je je duim álle andere vingers kunt laten aanraken (opponeren). Welk type gewricht is dit?",
+      "opties": [
+        "Kogelgewricht",
+        "Scharniergewricht",
+        "Rolgewricht",
+        "Zadelgewricht"
+      ],
+      "antwoord_index": 3,
+      "uitleg": "Het zadelgewricht maakt beweging in twee richtingen mogelijk — net genoeg om te opponeren."
+    },
+    {
+      "id": "qZ02",
+      "hoofdstuk": "h53",
+      "type": "inzicht",
+      "moeilijkheid": "lastig",
+      "vraag": "In de duim zit een zadelgewricht en in de andere vingerkootjes scharniergewrichten. Welke beweging kan jouw duim daardoor wel maken, en de andere vingers niet?",
+      "antwoord": "Doordat een zadelgewricht in twee richtingen kan bewegen, kan de duim niet alleen buigen/strekken, maar zich ook naar de handpalm toe draaien om de andere vingertoppen aan te raken (opponeren). De andere vingers hebben alleen scharniergewrichten en kunnen daardoor alléén buigen en strekken in één vlak.",
+      "kernwoorden": [
+        "zadelgewricht",
+        "opponeren",
+        "twee richtingen",
+        "scharnier",
+        "buigen",
+        "strekken"
+      ]
+    },
+    {
+      "id": "qA01",
+      "hoofdstuk": "h54",
+      "type": "inzicht",
+      "moeilijkheid": "lastig",
+      "vraag": "De achillespees verbindt de kuitspier met de hiel. Leg uit waarom je je voet niet meer naar beneden kunt bewegen als de achillespees helemaal afscheurt.",
+      "antwoord": "De kuitspier trekt — via de achillespees — aan het hielbot om de voet naar beneden te bewegen (op je tenen staan). Als de achillespees afscheurt, is de verbinding tussen kuitspier en hiel weg: de kuitspier schiet omhoog en de kracht komt niet meer bij het bot. De spier kan dus wel samentrekken, maar dat heeft geen effect op de voet meer.",
+      "kernwoorden": [
+        "achillespees",
+        "kuitspier",
+        "hiel",
+        "verbinding",
+        "afscheuren",
+        "kracht"
+      ]
+    },
+    {
+      "id": "qA02",
+      "hoofdstuk": "h54",
+      "type": "mc",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "De scheenbeenspier is duidelijk dunner dan de kuitspier, terwijl ze allebei deel zijn van hetzelfde antagonistische paar. Wat is de beste verklaring?",
+      "opties": [
+        "De scheenbeenspier hoeft minder kracht te leveren, want hij hoeft alleen tegen het gewicht van de voet in te werken; de kuitspier moet het hele lichaamsgewicht omhoog tillen bij op je tenen staan.",
+        "De scheenbeenspier bestaat uit glad spierweefsel en is daardoor altijd dunner.",
+        "De scheenbeenspier werkt onbewust en hoeft daarom minder spiervezels te hebben.",
+        "De scheenbeenspier is geen antagonist en doet daarom geen krachtwerk."
+      ],
+      "antwoord_index": 0,
+      "uitleg": "Hoeveel kracht een spier moet leveren bepaalt vooral hoe dik (hoeveel spiervezels) hij is."
+    },
+    {
+      "id": "qM01",
+      "hoofdstuk": "h54",
+      "type": "open",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "Leg in eigen woorden uit hoe een spier samentrekt op het niveau van de eiwitten actine en myosine.",
+      "antwoord": "In een spierfibril zitten twee soorten eiwitdraden naast elkaar: actine en myosine. Bij het samentrekken schuiven deze draden langs elkaar in elkaar, waardoor de fibril (en dus de spier) korter en dikker wordt. Hoe meer spiervezels dit tegelijk doen, hoe meer kracht de spier zet.",
+      "kernwoorden": [
+        "actine",
+        "myosine",
+        "spierfibril",
+        "schuiven",
+        "in elkaar",
+        "korter",
+        "dikker"
+      ]
+    },
+    {
+      "id": "qT01",
+      "hoofdstuk": "h54",
+      "type": "mc",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "Tussenribspieren gebruik je bij het ademen. Uit welk type spierweefsel bestaan ze?",
+      "opties": [
+        "Glad spierweefsel",
+        "Hartspierweefsel",
+        "Dwarsgestreept spierweefsel",
+        "Kraakbeenweefsel"
+      ],
+      "antwoord_index": 2,
+      "uitleg": "Ze hebben dezelfde bouw als skeletspieren (dwarsgestreept), ook al werken ze meestal onbewust."
+    },
+    {
+      "id": "qT02",
+      "hoofdstuk": "h54",
+      "type": "inzicht",
+      "moeilijkheid": "lastig",
+      "vraag": "Tussenribspieren bestaan uit dwarsgestreept spierweefsel, maar worden tóch ingedeeld bij de onwillekeurige (onbewuste) spieren. Leg dat uit.",
+      "antwoord": "Dwarsgestreept spierweefsel kún je in principe bewust aansturen, maar ademhaling gebeurt het grootste deel van de tijd vanzelf, zonder dat je erbij nadenkt (anders zou je stoppen met ademen als je in slaap valt). Daarom worden de tussenribspieren bij de onwillekeurige spieren gerekend — vanwege wat ze doen, niet vanwege hun bouw.",
+      "kernwoorden": [
+        "dwarsgestreept",
+        "ademhaling",
+        "bewust",
+        "onbewust",
+        "slaap",
+        "onwillekeurig"
+      ]
+    },
+    {
+      "id": "qV01",
+      "hoofdstuk": "h53",
+      "type": "mc",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "Welke vier manieren zijn er om botten met elkaar te verbinden?",
+      "opties": [
+        "spier — pees — band — kraakbeen",
+        "vergroeid — naad — kraakbeen — gewricht",
+        "kogelgewricht — rolgewricht — scharniergewricht — schuifgewricht",
+        "vergroeid — gewricht — spier — kraakbeen"
+      ],
+      "antwoord_index": 1,
+      "uitleg": "Vier verbindings­typen: vergroeid, naad, kraakbeen, gewricht. Daarbinnen heb je nog de vier typen gewrichten."
+    },
+    {
+      "id": "qV02",
+      "hoofdstuk": "h53",
+      "type": "open",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "Geef bij elk van de vier verbindings­typen één voorbeeld in het menselijk lichaam.",
+      "antwoord": "Vergroeid: de wervels van het heiligbeen (of staartbeen). Naad: tussen de schedelbotten van een volwassene. Kraakbeen: tussen de ribben en het borstbeen (of tussen de wervels). Gewricht: de heup (kogelgewricht), de knie (scharniergewricht), de elleboog (scharnier + rolgewricht), enz.",
+      "kernwoorden": [
+        "heiligbeen",
+        "schedel",
+        "ribben",
+        "borstbeen",
+        "heup",
+        "knie"
+      ]
+    },
+    {
+      "id": "qB01",
+      "hoofdstuk": "h52",
+      "type": "mc",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "Wat is de functie van het botvlies?",
+      "opties": [
+        "Het vormt nieuwe bloedcellen.",
+        "Het is een dun, taai vlies om de buitenkant van het bot dat onder andere zorgt voor groei en herstel; er lopen bloedvaten en zenuwen in.",
+        "Het is een laag kraakbeen op de gewrichtskogel.",
+        "Het is een soort smeervet binnenin de mergholte."
+      ],
+      "antwoord_index": 1
+    },
+    {
+      "id": "qS01",
+      "hoofdstuk": "h54",
+      "type": "mc",
+      "moeilijkheid": "gemiddeld",
+      "vraag": "Welke combinatie klopt?",
+      "opties": [
+        "Glad spierweefsel — bewust — in skeletspieren",
+        "Dwarsgestreept spierweefsel — bewust — in skeletspieren",
+        "Hartspierweefsel — bewust — in het hart",
+        "Glad spierweefsel — onbewust — in het hart"
+      ],
+      "antwoord_index": 1
+    },
+    {
+      "id": "qC01",
+      "hoofdstuk": "h52",
+      "type": "inzicht",
+      "moeilijkheid": "lastig",
+      "vraag": "Astronauten die lang in een ruimtestation verblijven, krijgen vaak zwakkere botten. Geef twee mogelijke oorzaken die je kunt verklaren met wat je hebt geleerd over botvorming.",
+      "antwoord": "1) In de ruimte is er bijna geen zwaartekracht, waardoor de botten veel minder belast worden. Botcellen merken weinig beweging in de vloeistof om zich heen, waardoor er minder nieuw bot wordt aangemaakt en zelfs bot wordt afgebroken (vergelijkbaar met osteoporose). 2) Astronauten komen niet of nauwelijks aan zonlicht, dus maken ze minder vitamine D aan. Zonder vitamine D nemen ze ook minder calcium op, en zonder calcium kunnen de tussencelstof-kalkzouten in het bot niet goed worden aangevuld.",
+      "kernwoorden": [
+        "zwaartekracht",
+        "botcellen",
+        "afgebroken",
+        "vitamine D",
+        "zonlicht",
+        "calcium",
+        "osteoporose"
+      ]
+    },
+    {
+      "id": "qC02",
+      "hoofdstuk": "h54",
+      "type": "inzicht",
+      "moeilijkheid": "lastig",
+      "vraag": "Stijn wil één keer een kogel zo ver mogelijk wegstoten. Welke combinatie van bot, gewricht, type spier én type spiervezel kiest zijn lichaam voor deze beweging? Leg uit waarom.",
+      "antwoord": "Voor de stoot gebruikt hij vooral het opperarmbeen + spaakbeen/ellepijp; het belangrijkste gewricht is het kogelgewricht in zijn schouder (alle kanten op, dus optimaal voor wegstoten) plus het scharniergewricht in zijn elleboog. De spier die het laatste duwt is de triceps (strekspier). Omdat het maar één korte, krachtige beweging is, gebruikt zijn lichaam vooral snelle spiervezels: die leveren veel kracht in korte tijd, ook al raken ze snel vermoeid.",
+      "kernwoorden": [
+        "kogelgewricht",
+        "schouder",
+        "scharnier",
+        "elleboog",
+        "triceps",
+        "strekspier",
+        "snelle spiervezels",
+        "kracht"
+      ],
+      "afbeelding": "img/pages/PXL_20260524_102104432.jpg"
     }
   ],
   "aanwijzen": [
+    {
+      "id": "a-voorhoofd",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-voorhoofdsbeen",
+      "naam": "Voorhoofdsbeen",
+      "vraag": "Klik op het voorhoofdsbeen.",
+      "hint": "Boven aan de schedel."
+    },
+    {
+      "id": "a-wandbeen",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-wandbeen",
+      "naam": "Wandbeen",
+      "vraag": "Klik op het wandbeen.",
+      "hint": "Zijkant van de schedel."
+    },
     {
       "id": "a-schedel",
       "hoofdstuk": "h51",
       "svg": "img/anatomy/skelet.svg",
       "region": "r-schedel",
-      "naam": "Schedel",
-      "vraag": "Klik op de schedel."
+      "naam": "Schedel (overig)",
+      "vraag": "Klik op het overige deel van de schedel (rond de ogen)."
+    },
+    {
+      "id": "a-bovenkaak",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-bovenkaak",
+      "naam": "Bovenkaak",
+      "vraag": "Klik op de bovenkaak.",
+      "hint": "Het vaste kaakbot."
     },
     {
       "id": "a-onderkaak",
@@ -1975,7 +2277,8 @@
       "svg": "img/anatomy/skelet.svg",
       "region": "r-onderkaak",
       "naam": "Onderkaak",
-      "vraag": "Klik op de onderkaak."
+      "vraag": "Klik op de onderkaak.",
+      "hint": "Het beweegbare kaakbot."
     },
     {
       "id": "a-halswervels",
@@ -1994,6 +2297,15 @@
       "naam": "Sleutelbeen",
       "vraag": "Klik op het sleutelbeen.",
       "hint": "Onderdeel van de schoudergordel, vooraan."
+    },
+    {
+      "id": "a-schouderblad",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-schouderblad",
+      "naam": "Schouderblad",
+      "vraag": "Klik op het schouderblad.",
+      "hint": "Plat bot achter de schouder; deel van de schoudergordel."
     },
     {
       "id": "a-borstbeen",
@@ -2037,7 +2349,7 @@
       "region": "r-spaakbeen",
       "naam": "Spaakbeen",
       "vraag": "Klik op het spaakbeen (onderarm, duim-kant).",
-      "hint": "Onderarmbot aan de buitenkant (duim-zijde)."
+      "hint": "Buitenkant van de onderarm."
     },
     {
       "id": "a-ellepijp",
@@ -2046,7 +2358,34 @@
       "region": "r-ellepijp",
       "naam": "Ellepijp",
       "vraag": "Klik op de ellepijp (onderarm, pink-kant).",
-      "hint": "Onderarmbot aan de binnenkant (pink-zijde)."
+      "hint": "Binnenkant van de onderarm."
+    },
+    {
+      "id": "a-handwortel",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-handwortel",
+      "naam": "Handwortelbeentjes",
+      "vraag": "Klik op de handwortelbeentjes (pols).",
+      "hint": "Acht kleine botjes in de pols."
+    },
+    {
+      "id": "a-middenhand",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-middenhand",
+      "naam": "Middenhandsbeentjes",
+      "vraag": "Klik op de middenhandsbeentjes.",
+      "hint": "Tussen pols en vingers, in de handpalm."
+    },
+    {
+      "id": "a-vingerkootjes",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-vingerkootjes",
+      "naam": "Vingerkootjes",
+      "vraag": "Klik op de vingerkootjes.",
+      "hint": "De botjes ván de vingers zelf."
     },
     {
       "id": "a-bekkengordel",
@@ -2063,7 +2402,7 @@
       "region": "r-dijbeen",
       "naam": "Dijbeen",
       "vraag": "Klik op het dijbeen.",
-      "hint": "Het bot van je bovenbeen."
+      "hint": "Het bot van je bovenbeen — het langste bot."
     },
     {
       "id": "a-kniebeen",
@@ -2080,7 +2419,7 @@
       "region": "r-scheenbeen",
       "naam": "Scheenbeen",
       "vraag": "Klik op het scheenbeen (binnenkant van het onderbeen).",
-      "hint": "Het dikke onderbeen-bot aan de voorkant."
+      "hint": "Het dikke onderbeenbot."
     },
     {
       "id": "a-kuitbeen",
@@ -2089,7 +2428,34 @@
       "region": "r-kuitbeen",
       "naam": "Kuitbeen",
       "vraag": "Klik op het kuitbeen (buitenkant van het onderbeen).",
-      "hint": "Het dunne onderbeen-bot, naast het scheenbeen."
+      "hint": "Het dunne onderbeenbot."
+    },
+    {
+      "id": "a-voetwortel",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-voetwortel",
+      "naam": "Voetwortelbeentjes",
+      "vraag": "Klik op de voetwortelbeentjes (wreef).",
+      "hint": "Bovenkant van de voet, vlak achter de tenen-botjes."
+    },
+    {
+      "id": "a-middenvoet",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-middenvoet",
+      "naam": "Middenvoetsbeentjes",
+      "vraag": "Klik op de middenvoetsbeentjes.",
+      "hint": "Tussen wreef en tenen."
+    },
+    {
+      "id": "a-teenkootjes",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-teenkootjes",
+      "naam": "Teenkootjes",
+      "vraag": "Klik op de teenkootjes.",
+      "hint": "De botjes ván de tenen."
     },
     {
       "id": "a-biceps",
@@ -2167,8 +2533,8 @@
       "svg": "img/anatomy/spieren.svg",
       "region": "m-rugspieren",
       "naam": "Rugspieren",
-      "vraag": "Klik op de rugspieren.",
-      "hint": "Op de rug — gebruik het achteraanzicht."
+      "vraag": "Klik op de rugspieren (onderrug).",
+      "hint": "Achteraanzicht — onder de monnikskapspier."
     },
     {
       "id": "a-bilspier",
@@ -2177,6 +2543,33 @@
       "region": "m-bilspier",
       "naam": "Bilspier",
       "vraag": "Klik op de bilspier."
+    },
+    {
+      "id": "a-monnikskap",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-monnikskap",
+      "naam": "Monnikskapspier",
+      "vraag": "Klik op de monnikskapspier.",
+      "hint": "Ruitvormige spier in nek en bovenrug."
+    },
+    {
+      "id": "a-tussenribspieren",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-tussenribspieren",
+      "naam": "Tussenribspieren",
+      "vraag": "Klik op de tussenribspieren (helpen bij ademhalen).",
+      "hint": "Smalle strookjes spier tússen de ribben."
+    },
+    {
+      "id": "a-achillespees",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-achillespees",
+      "naam": "Achillespees",
+      "vraag": "Klik op de achillespees (verbindt kuitspier met hiel).",
+      "hint": "Onder de kuitspier, in geel weergegeven."
     }
   ]
 }
