@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 540" class="anat-svg" aria-label="Skelet vooraanzicht">
+  <defs>
+    <style>
+      .body-bg { fill:#fef3f2; stroke:#fbcfe8; stroke-width:1; }
+      .bone    { fill:#f8fafc; stroke:#475569; stroke-width:1.3; }
+      .feature { fill:#475569; }
+      .region  { cursor:pointer; }
+      .region:hover .bone      { fill:#fef9c3; }
+      .region.correct .bone    { fill:#bbf7d0; stroke:#16a34a; stroke-width:2; }
+      .region.wrong   .bone    { fill:#fecaca; stroke:#dc2626; stroke-width:2; }
+      .region.hint    .bone    { fill:#bfdbfe; stroke:#2563eb; stroke-width:2; }
+    </style>
+  </defs>
+
+  <!-- Lichaamssilhouet (achtergrond, niet klikbaar) -->
+  <g class="silhouette" pointer-events="none">
+    <ellipse class="body-bg" cx="110" cy="50"  rx="38" ry="42"/>
+    <rect    class="body-bg" x="48"  y="92"   width="124" height="160" rx="30"/>
+    <rect    class="body-bg" x="18"  y="108"  width="38"  height="180" rx="18"/>
+    <rect    class="body-bg" x="164" y="108"  width="38"  height="180" rx="18"/>
+    <rect    class="body-bg" x="62"  y="240"  width="40"  height="295" rx="18"/>
+    <rect    class="body-bg" x="118" y="240"  width="40"  height="295" rx="18"/>
+  </g>
+
+  <!-- Schedel -->
+  <g class="region" data-region="r-schedel">
+    <title>schedel</title>
+    <ellipse class="bone" cx="110" cy="48" rx="28" ry="32"/>
+    <circle class="feature" cx="100" cy="50" r="2.5"/>
+    <circle class="feature" cx="120" cy="50" r="2.5"/>
+    <path class="feature" d="M108,58 L110,68 L112,58 Z"/>
+  </g>
+
+  <!-- Onderkaak -->
+  <g class="region" data-region="r-onderkaak">
+    <title>onderkaak</title>
+    <path class="bone" d="M85,76 Q110,94 135,76 L132,84 Q110,92 88,84 Z"/>
+  </g>
+
+  <!-- Halswervels -->
+  <g class="region" data-region="r-halswervels">
+    <title>halswervels</title>
+    <rect class="bone" x="104" y="82" width="12" height="7" rx="1.5"/>
+    <rect class="bone" x="104" y="91" width="12" height="7" rx="1.5"/>
+  </g>
+
+  <!-- Sleutelbeen -->
+  <g class="region" data-region="r-sleutelbeen">
+    <title>sleutelbeen</title>
+    <path class="bone" d="M108,102 Q82,100 58,114 L58,118 Q82,104 108,106 Z"/>
+    <path class="bone" d="M112,102 Q138,100 162,114 L162,118 Q138,104 112,106 Z"/>
+  </g>
+
+  <!-- Borstbeen -->
+  <g class="region" data-region="r-borstbeen">
+    <title>borstbeen</title>
+    <rect class="bone" x="103" y="112" width="14" height="58" rx="3"/>
+  </g>
+
+  <!-- Ribben (borstkas) -->
+  <g class="region" data-region="r-ribben">
+    <title>ribben</title>
+    <path class="bone" d="M101,120 Q72,128 52,142 L52,148 Q72,134 101,126 Z"/>
+    <path class="bone" d="M101,138 Q68,148 48,162 L48,168 Q68,154 101,144 Z"/>
+    <path class="bone" d="M101,156 Q68,166 50,180 L50,186 Q68,172 101,162 Z"/>
+    <path class="bone" d="M101,174 Q72,184 56,196 L56,202 Q72,190 101,180 Z"/>
+    <path class="bone" d="M119,120 Q148,128 168,142 L168,148 Q148,134 119,126 Z"/>
+    <path class="bone" d="M119,138 Q152,148 172,162 L172,168 Q152,154 119,144 Z"/>
+    <path class="bone" d="M119,156 Q152,166 170,180 L170,186 Q152,172 119,162 Z"/>
+    <path class="bone" d="M119,174 Q148,184 164,196 L164,202 Q148,190 119,180 Z"/>
+  </g>
+
+  <!-- Wervelkolom (lendenwervels zichtbaar onder ribben) -->
+  <g class="region" data-region="r-wervelkolom">
+    <title>wervelkolom</title>
+    <rect class="bone" x="105" y="172" width="10" height="10" rx="1.5"/>
+    <rect class="bone" x="105" y="184" width="10" height="10" rx="1.5"/>
+    <rect class="bone" x="105" y="196" width="10" height="10" rx="1.5"/>
+    <rect class="bone" x="105" y="208" width="10" height="10" rx="1.5"/>
+    <rect class="bone" x="105" y="220" width="10" height="10" rx="1.5"/>
+  </g>
+
+  <!-- Opperarmbeen -->
+  <g class="region" data-region="r-opperarmbeen">
+    <title>opperarmbeen</title>
+    <rect class="bone" x="34"  y="120" width="16" height="82" rx="7"/>
+    <rect class="bone" x="170" y="120" width="16" height="82" rx="7"/>
+  </g>
+
+  <!-- Spaakbeen (duim-kant, buitenkant) -->
+  <g class="region" data-region="r-spaakbeen">
+    <title>spaakbeen</title>
+    <rect class="bone" x="30" y="207" width="7" height="72" rx="3"/>
+    <rect class="bone" x="183" y="207" width="7" height="72" rx="3"/>
+  </g>
+
+  <!-- Ellepijp (pink-kant, binnenkant) -->
+  <g class="region" data-region="r-ellepijp">
+    <title>ellepijp</title>
+    <rect class="bone" x="41" y="207" width="7" height="72" rx="3"/>
+    <rect class="bone" x="172" y="207" width="7" height="72" rx="3"/>
+  </g>
+
+  <!-- Handwortelbeentjes -->
+  <g class="region" data-region="r-hand">
+    <title>handwortelbeentjes</title>
+    <ellipse class="bone" cx="38"  cy="290" rx="11" ry="13"/>
+    <ellipse class="bone" cx="182" cy="290" rx="11" ry="13"/>
+  </g>
+
+  <!-- Bekken -->
+  <g class="region" data-region="r-bekkengordel">
+    <title>bekkengordel</title>
+    <path class="bone" d="M70,238 L150,238 Q165,272 145,298 L75,298 Q55,272 70,238 Z"/>
+  </g>
+
+  <!-- Dijbeen -->
+  <g class="region" data-region="r-dijbeen">
+    <title>dijbeen</title>
+    <rect class="bone" x="73" y="300" width="22" height="115" rx="8"/>
+    <rect class="bone" x="125" y="300" width="22" height="115" rx="8"/>
+  </g>
+
+  <!-- Kniebeen (knieschijf) -->
+  <g class="region" data-region="r-kniebeen">
+    <title>kniebeen (knieschijf)</title>
+    <circle class="bone" cx="84"  cy="425" r="9"/>
+    <circle class="feature" cx="84"  cy="425" r="2.5"/>
+    <circle class="bone" cx="136" cy="425" r="9"/>
+    <circle class="feature" cx="136" cy="425" r="2.5"/>
+  </g>
+
+  <!-- Scheenbeen (binnenkant onderbeen, dik) -->
+  <g class="region" data-region="r-scheenbeen">
+    <title>scheenbeen</title>
+    <rect class="bone" x="76" y="436" width="14" height="82" rx="5"/>
+    <rect class="bone" x="130" y="436" width="14" height="82" rx="5"/>
+  </g>
+
+  <!-- Kuitbeen (buitenkant onderbeen, dun) -->
+  <g class="region" data-region="r-kuitbeen">
+    <title>kuitbeen</title>
+    <rect class="bone" x="92" y="436" width="6" height="82" rx="2"/>
+    <rect class="bone" x="122" y="436" width="6" height="82" rx="2"/>
+  </g>
+
+  <!-- Voet -->
+  <g class="region" data-region="r-voet">
+    <title>voet</title>
+    <ellipse class="bone" cx="85"  cy="525" rx="14" ry="7"/>
+    <ellipse class="bone" cx="135" cy="525" rx="14" ry="7"/>
+  </g>
+</svg>

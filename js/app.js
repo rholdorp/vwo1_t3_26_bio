@@ -28,6 +28,7 @@
       switch (mode) {
         case "home":      return renderHome();
         case "leren":     return renderLeren();
+        case "aanwijzen": return renderAanwijzen();
         case "begrippen": return renderBegrippen();
         case "oefenen":   return renderOefenen();
         case "verbanden": return renderVerbanden();
@@ -58,6 +59,7 @@
     const allLearnIds = [
       ...content.begrippen.map(b => "b:" + b.id),
       ...content.feiten.map(f => "f:" + f.id),
+      ...(content.aanwijzen || []).map(a => "a:" + a.id),
     ];
     const s = SRS.stats(allLearnIds);
 
@@ -79,7 +81,11 @@
       <div class="grid">
         <div class="tile" data-go="leren">
           <h3>🃏 Leren (flashcards)</h3>
-          <p>Begrippen + feiten met slim herhaalsysteem (SR). Begin hier.</p>
+          <p>Begrippen + feiten + aanwijs-kaarten met slim herhaalsysteem (SR). Begin hier.</p>
+        </div>
+        <div class="tile" data-go="aanwijzen">
+          <h3>🦴 Aanwijzen</h3>
+          <p>Klik op het juiste bot of de juiste spier op een interactief plaatje.</p>
         </div>
         <div class="tile" data-go="begrippen">
           <h3>📖 Begrippenlijst</h3>
@@ -115,18 +121,110 @@
     view.querySelectorAll(".tile").forEach(t => t.onclick = () => go(t.dataset.go));
   };
 
+  // ---------- SVG loader (cache) ----------
+  const _svgCache = {};
+  const loadSvg = async (path) => {
+    if (!_svgCache[path]) {
+      _svgCache[path] = fetch(path, { cache: "force-cache" }).then(r => {
+        if (!r.ok) throw new Error(`Kon ${path} niet laden (${r.status})`);
+        return r.text();
+      });
+    }
+    return _svgCache[path];
+  };
+
+  // Rendert één aanwijs-kaart in `host`. Geeft (grade) door aan onDone.
+  // grade: 2 = correct in één keer, 1 = correct na fout, 0 = opgegeven/fout
+  const renderAanwijsCard = async (host, it, onDone) => {
+    const svgText = await loadSvg(it.svg);
+    host.innerHTML = `
+      <div class="card aanwijs">
+        <div class="row between" style="margin-bottom:8px">
+          <span class="chip">Aanwijzen · ${esc(Data.chapterTitle(content, it.hoofdstuk))}</span>
+        </div>
+        <h3 style="margin:4px 0 8px">${esc(it.vraag)}</h3>
+        ${it.hint ? `<p class="muted" style="margin:0 0 8px">💡 ${esc(it.hint)}</p>` : ""}
+        <div class="anat-wrap" id="anat-wrap">${svgText}</div>
+        <div id="anat-feedback" class="muted" style="margin-top:8px"></div>
+        <div id="anat-actions" class="row" style="margin-top:10px; justify-content:center"></div>
+      </div>`;
+    const wrap = host.querySelector("#anat-wrap");
+    const svg = wrap.querySelector("svg");
+    svg.classList.add("anat-svg");
+    const fb = host.querySelector("#anat-feedback");
+    const actions = host.querySelector("#anat-actions");
+
+    let attempts = 0;
+    let done = false;
+
+    const showActions = (grade) => {
+      actions.innerHTML = "";
+      const btnN = document.createElement("button");
+      btnN.className = "primary";
+      btnN.textContent = "Volgende →";
+      btnN.onclick = () => onDone(grade);
+      actions.appendChild(btnN);
+    };
+
+    svg.addEventListener("click", (e) => {
+      if (done) return;
+      const r = e.target.closest(".region");
+      if (!r) return;
+      attempts++;
+      const clicked = r.dataset.region;
+      if (clicked === it.region) {
+        done = true;
+        r.classList.add("correct");
+        fb.innerHTML = `✅ <b>Goed!</b> Dit is de <b>${esc(it.naam.toLowerCase())}</b>.` +
+          (attempts > 1 ? ` <span class="muted">(${attempts} pogingen)</span>` : "");
+        showActions(attempts === 1 ? 2 : 1);
+      } else if (attempts < 2) {
+        r.classList.add("wrong");
+        fb.innerHTML = `❌ Nog een keer proberen. Dat was niet de <b>${esc(it.naam.toLowerCase())}</b>.`;
+        setTimeout(() => r.classList.remove("wrong"), 900);
+      } else {
+        done = true;
+        r.classList.add("wrong");
+        const target = svg.querySelector(`.region[data-region="${it.region}"]`);
+        if (target) target.classList.add("hint");
+        fb.innerHTML = `❌ Het juiste antwoord (blauw) is de <b>${esc(it.naam.toLowerCase())}</b>.`;
+        showActions(0);
+      }
+    });
+
+    // "Ik weet het niet" knop
+    const giveUp = document.createElement("button");
+    giveUp.className = "ghost";
+    giveUp.textContent = "Toon antwoord";
+    giveUp.onclick = () => {
+      if (done) return;
+      done = true;
+      const target = svg.querySelector(`.region[data-region="${it.region}"]`);
+      if (target) target.classList.add("hint");
+      fb.innerHTML = `Het juiste antwoord (blauw) is de <b>${esc(it.naam.toLowerCase())}</b>.`;
+      showActions(0);
+    };
+    actions.appendChild(giveUp);
+  };
+
   // ---------- LEREN (flashcards) ----------
   const renderLeren = () => {
     subtitle.textContent = "Leren — flashcards met spaced repetition";
 
     const items = [
       ...content.begrippen.map(b => ({
-        id: "b:" + b.id, hoofdstuk: b.hoofdstuk, front: b.term, back: b.definitie, kind: "Begrip",
+        id: "b:" + b.id, hoofdstuk: b.hoofdstuk, kind: "Begrip",
+        front: b.term, back: b.definitie,
         afbeelding: b.afbeelding, bron: b.bron,
       })),
       ...content.feiten.map(f => ({
-        id: "f:" + f.id, hoofdstuk: f.hoofdstuk, front: "Feit (" + Data.chapterTitle(content, f.hoofdstuk) + ")",
-        back: f.feit, kind: "Feit", afbeelding: f.afbeelding,
+        id: "f:" + f.id, hoofdstuk: f.hoofdstuk, kind: "Feit",
+        front: "Feit (" + Data.chapterTitle(content, f.hoofdstuk) + ")",
+        back: f.feit, afbeelding: f.afbeelding,
+      })),
+      ...(content.aanwijzen || []).map(a => ({
+        id: "a:" + a.id, hoofdstuk: a.hoofdstuk, kind: "Aanwijzen",
+        aanwijs: a,
       })),
     ];
     const byId = Object.fromEntries(items.map(i => [i.id, i]));
@@ -150,6 +248,20 @@
         return;
       }
       const it = byId[order[i]];
+      if (it.kind === "Aanwijzen") {
+        const wrapper = document.createElement("div");
+        view.innerHTML = `
+          <div class="row between" style="margin-bottom:10px">
+            <span class="muted">${i + 1} / ${order.length}</span>
+          </div>`;
+        view.appendChild(wrapper);
+        renderAanwijsCard(wrapper, it.aanwijs, (grade) => {
+          SRS.review(it.id, grade);
+          i++;
+          renderCard();
+        }).catch(e => showError(e.message));
+        return;
+      }
       view.innerHTML = `
         <div class="row between" style="margin-bottom:10px">
           <span class="chip">${it.kind} · ${esc(Data.chapterTitle(content, it.hoofdstuk))}</span>
@@ -191,6 +303,48 @@
       };
     };
     renderCard();
+  };
+
+  // ---------- AANWIJZEN (alleen botten/spieren-klik) ----------
+  const renderAanwijzen = () => {
+    subtitle.textContent = "Aanwijzen — klik op het juiste bot of de juiste spier";
+    const cards = (content.aanwijzen || []).map(a => ({
+      id: "a:" + a.id, hoofdstuk: a.hoofdstuk, kind: "Aanwijzen", aanwijs: a,
+    }));
+    if (!cards.length) {
+      view.innerHTML = `<div class="card"><h2>Geen aanwijs-kaarten</h2></div>`;
+      return;
+    }
+    const byId = Object.fromEntries(cards.map(c => [c.id, c]));
+    let order = SRS.dueItems(cards.map(c => c.id));
+    if (order.length === 0) {
+      // niets due → doe gewoon een ronde door alles in willekeurige volgorde
+      order = cards.map(c => c.id).sort(() => Math.random() - 0.5);
+    }
+    let i = 0;
+    const next = () => {
+      if (i >= order.length) {
+        view.innerHTML = `<div class="card"><h2>✅ Sessie klaar</h2>
+          <p>Je hebt ${order.length} aanwijs-kaarten gedaan.</p>
+          <button class="primary" id="again">Nog een ronde</button>
+          <button class="ghost" id="home">Terug naar start</button></div>`;
+        document.getElementById("again").onclick = () => renderAanwijzen();
+        document.getElementById("home").onclick  = () => go("home");
+        return;
+      }
+      const it = byId[order[i]];
+      view.innerHTML = `<div class="row between" style="margin-bottom:10px">
+        <span class="chip brand">Aanwijzen</span>
+        <span class="muted">${i + 1} / ${order.length}</span></div>`;
+      const wrap = document.createElement("div");
+      view.appendChild(wrap);
+      renderAanwijsCard(wrap, it.aanwijs, (grade) => {
+        SRS.review(it.id, grade);
+        i++;
+        next();
+      }).catch(e => showError(e.message));
+    };
+    next();
   };
 
   // ---------- BEGRIPPEN ----------

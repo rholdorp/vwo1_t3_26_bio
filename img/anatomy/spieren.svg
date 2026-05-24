@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 540" class="anat-svg" aria-label="Spieren voor- en achteraanzicht">
+  <defs>
+    <style>
+      .body-bg { fill:#fef3f2; stroke:#fbcfe8; stroke-width:1; }
+      .muscle  { fill:#f87171; stroke:#7f1d1d; stroke-width:1.2; }
+      .region  { cursor:pointer; }
+      .region:hover .muscle      { fill:#fde68a; }
+      .region.correct .muscle    { fill:#bbf7d0; stroke:#16a34a; stroke-width:2; }
+      .region.wrong   .muscle    { fill:#fecaca; stroke:#dc2626; stroke-width:2; }
+      .region.hint    .muscle    { fill:#bfdbfe; stroke:#2563eb; stroke-width:2; }
+      .heading { font: 700 12px sans-serif; fill:#0f172a; text-anchor:middle; pointer-events:none; }
+    </style>
+  </defs>
+
+  <!-- ====================== VOORAANZICHT (links, x 0-220) ====================== -->
+  <text class="heading" x="110" y="14">vooraanzicht</text>
+  <g class="silhouette" pointer-events="none">
+    <ellipse class="body-bg" cx="110" cy="50"  rx="34" ry="38"/>
+    <rect    class="body-bg" x="52"  y="92"   width="116" height="160" rx="28"/>
+    <rect    class="body-bg" x="22"  y="106"  width="36"  height="180" rx="16"/>
+    <rect    class="body-bg" x="162" y="106"  width="36"  height="180" rx="16"/>
+    <rect    class="body-bg" x="64"  y="240"  width="40"  height="295" rx="18"/>
+    <rect    class="body-bg" x="116" y="240"  width="40"  height="295" rx="18"/>
+  </g>
+
+  <!-- Borstspier (pectoralis) -->
+  <g class="region" data-region="m-borstspier">
+    <title>borstspier</title>
+    <path class="muscle" d="M62,105 Q90,98 108,112 L108,150 Q86,160 60,150 Z"/>
+    <path class="muscle" d="M158,105 Q130,98 112,112 L112,150 Q134,160 160,150 Z"/>
+  </g>
+
+  <!-- Buikspieren -->
+  <g class="region" data-region="m-buikspieren">
+    <title>buikspieren</title>
+    <rect class="muscle" x="92"  y="160" width="16" height="18" rx="3"/>
+    <rect class="muscle" x="112" y="160" width="16" height="18" rx="3"/>
+    <rect class="muscle" x="92"  y="182" width="16" height="18" rx="3"/>
+    <rect class="muscle" x="112" y="182" width="16" height="18" rx="3"/>
+    <rect class="muscle" x="92"  y="204" width="16" height="18" rx="3"/>
+    <rect class="muscle" x="112" y="204" width="16" height="18" rx="3"/>
+  </g>
+
+  <!-- Biceps -->
+  <g class="region" data-region="m-biceps">
+    <title>biceps</title>
+    <ellipse class="muscle" cx="36"  cy="155" rx="13" ry="32"/>
+    <ellipse class="muscle" cx="184" cy="155" rx="13" ry="32"/>
+  </g>
+
+  <!-- Voorste dijbeenspier (quadriceps) -->
+  <g class="region" data-region="m-dijbeenspier">
+    <title>voorste dijbeenspier (quadriceps)</title>
+    <ellipse class="muscle" cx="84"  cy="320" rx="18" ry="55"/>
+    <ellipse class="muscle" cx="136" cy="320" rx="18" ry="55"/>
+  </g>
+
+  <!-- Scheenbeenspier (front of shin, lateral) -->
+  <g class="region" data-region="m-scheenbeenspier">
+    <title>scheenbeenspier</title>
+    <ellipse class="muscle" cx="78"  cy="460" rx="9" ry="42"/>
+    <ellipse class="muscle" cx="142" cy="460" rx="9" ry="42"/>
+  </g>
+
+  <!-- ====================== ACHTERAANZICHT (rechts, x 220-440) ====================== -->
+  <text class="heading" x="330" y="14">achteraanzicht</text>
+  <g class="silhouette" pointer-events="none" transform="translate(220 0)">
+    <ellipse class="body-bg" cx="110" cy="50"  rx="34" ry="38"/>
+    <rect    class="body-bg" x="52"  y="92"   width="116" height="160" rx="28"/>
+    <rect    class="body-bg" x="22"  y="106"  width="36"  height="180" rx="16"/>
+    <rect    class="body-bg" x="162" y="106"  width="36"  height="180" rx="16"/>
+    <rect    class="body-bg" x="64"  y="240"  width="40"  height="295" rx="18"/>
+    <rect    class="body-bg" x="116" y="240"  width="40"  height="295" rx="18"/>
+  </g>
+
+  <!-- Rugspieren -->
+  <g class="region" data-region="m-rugspieren">
+    <title>rugspieren</title>
+    <path class="muscle" d="M272,108 Q330,100 388,108 L390,200 Q360,215 330,215 Q300,215 270,200 Z"/>
+  </g>
+
+  <!-- Triceps -->
+  <g class="region" data-region="m-triceps">
+    <title>triceps</title>
+    <ellipse class="muscle" cx="256" cy="160" rx="13" ry="36"/>
+    <ellipse class="muscle" cx="404" cy="160" rx="13" ry="36"/>
+  </g>
+
+  <!-- Bilspier -->
+  <g class="region" data-region="m-bilspier">
+    <title>bilspier</title>
+    <ellipse class="muscle" cx="304" cy="248" rx="22" ry="22"/>
+    <ellipse class="muscle" cx="356" cy="248" rx="22" ry="22"/>
+  </g>
+
+  <!-- Achterste dijbeenspier (hamstring) -->
+  <g class="region" data-region="m-achterste-dijbeenspier">
+    <title>achterste dijbeenspier (hamstring)</title>
+    <ellipse class="muscle" cx="304" cy="320" rx="18" ry="55"/>
+    <ellipse class="muscle" cx="356" cy="320" rx="18" ry="55"/>
+  </g>
+
+  <!-- Kuitspier -->
+  <g class="region" data-region="m-kuitspier">
+    <title>kuitspier</title>
+    <ellipse class="muscle" cx="304" cy="455" rx="14" ry="48"/>
+    <ellipse class="muscle" cx="356" cy="455" rx="14" ry="48"/>
+  </g>
+</svg>

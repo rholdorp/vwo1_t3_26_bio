@@ -481,6 +481,50 @@ q_inz("qX06", "h51",
       "lastig", afbeelding=p("101740664"))
 
 # ---------------------------------------------------------------------------
+# Aanwijs-kaarten: klik de juiste bot/spier aan op de interactieve SVG
+# ---------------------------------------------------------------------------
+SKELET_SVG  = "img/anatomy/skelet.svg"
+SPIEREN_SVG = "img/anatomy/spieren.svg"
+
+# Lijst: (id, svg, region-id, naam, vraag, hoofdstuk, hint)
+AANWIJZEN_RAW = [
+    # --- Botten op het skelet (5.1) ---
+    ("a-schedel",      SKELET_SVG, "r-schedel",      "Schedel",      "Klik op de schedel.", "h51", None),
+    ("a-onderkaak",    SKELET_SVG, "r-onderkaak",    "Onderkaak",    "Klik op de onderkaak.", "h51", None),
+    ("a-halswervels",  SKELET_SVG, "r-halswervels",  "Halswervels",  "Klik op de halswervels.", "h51", "Bovenste deel van de wervelkolom."),
+    ("a-sleutelbeen",  SKELET_SVG, "r-sleutelbeen",  "Sleutelbeen",  "Klik op het sleutelbeen.", "h51", "Onderdeel van de schoudergordel, vooraan."),
+    ("a-borstbeen",    SKELET_SVG, "r-borstbeen",    "Borstbeen",    "Klik op het borstbeen.", "h51", "Plat bot midden in de borstkas."),
+    ("a-ribben",       SKELET_SVG, "r-ribben",       "Ribben",       "Klik op de ribben.", "h51", None),
+    ("a-wervelkolom",  SKELET_SVG, "r-wervelkolom",  "Wervelkolom",  "Klik op de wervelkolom (lendenwervels).", "h51", "De wervels onder de ribben."),
+    ("a-opperarmbeen", SKELET_SVG, "r-opperarmbeen", "Opperarmbeen", "Klik op het opperarmbeen.", "h51", "Het bovenarmbot."),
+    ("a-spaakbeen",    SKELET_SVG, "r-spaakbeen",    "Spaakbeen",    "Klik op het spaakbeen (onderarm, duim-kant).", "h53", "Onderarmbot aan de buitenkant (duim-zijde)."),
+    ("a-ellepijp",     SKELET_SVG, "r-ellepijp",     "Ellepijp",     "Klik op de ellepijp (onderarm, pink-kant).", "h53", "Onderarmbot aan de binnenkant (pink-zijde)."),
+    ("a-bekkengordel", SKELET_SVG, "r-bekkengordel", "Bekkengordel", "Klik op de bekkengordel (het bekken).", "h51", None),
+    ("a-dijbeen",      SKELET_SVG, "r-dijbeen",      "Dijbeen",      "Klik op het dijbeen.", "h51", "Het bot van je bovenbeen."),
+    ("a-kniebeen",     SKELET_SVG, "r-kniebeen",     "Kniebeen",     "Klik op het kniebeen (de knieschijf).", "h53", None),
+    ("a-scheenbeen",   SKELET_SVG, "r-scheenbeen",   "Scheenbeen",   "Klik op het scheenbeen (binnenkant van het onderbeen).", "h53", "Het dikke onderbeen-bot aan de voorkant."),
+    ("a-kuitbeen",     SKELET_SVG, "r-kuitbeen",     "Kuitbeen",     "Klik op het kuitbeen (buitenkant van het onderbeen).", "h53", "Het dunne onderbeen-bot, naast het scheenbeen."),
+
+    # --- Spieren op het lichaam (5.4) ---
+    ("a-biceps",       SPIEREN_SVG, "m-biceps",                  "Biceps",                    "Klik op de biceps (buigspier van de bovenarm).", "h54", "Voorkant van de bovenarm."),
+    ("a-triceps",      SPIEREN_SVG, "m-triceps",                 "Triceps",                   "Klik op de triceps (strekspier van de bovenarm).", "h54", "Achterkant van de bovenarm."),
+    ("a-kuitspier",    SPIEREN_SVG, "m-kuitspier",               "Kuitspier",                 "Klik op de kuitspier.", "h54", "Achterkant van het onderbeen."),
+    ("a-scheenspier",  SPIEREN_SVG, "m-scheenbeenspier",         "Scheenbeenspier",           "Klik op de scheenbeenspier (antagonist van de kuitspier).", "h54", "Voorkant van het onderbeen."),
+    ("a-dijbeenspier", SPIEREN_SVG, "m-dijbeenspier",            "Voorste dijbeenspier",      "Klik op de voorste dijbeenspier (quadriceps).", "h54", "Voorkant van het bovenbeen."),
+    ("a-achterdij",    SPIEREN_SVG, "m-achterste-dijbeenspier",  "Achterste dijbeenspier",    "Klik op de achterste dijbeenspier (hamstring).", "h54", "Achterkant van het bovenbeen."),
+    ("a-borstspier",   SPIEREN_SVG, "m-borstspier",              "Borstspier",                "Klik op de borstspier.", "h54", None),
+    ("a-buikspieren",  SPIEREN_SVG, "m-buikspieren",             "Buikspieren",               "Klik op de buikspieren.", "h54", None),
+    ("a-rugspieren",   SPIEREN_SVG, "m-rugspieren",              "Rugspieren",                "Klik op de rugspieren.", "h54", "Op de rug — gebruik het achteraanzicht."),
+    ("a-bilspier",     SPIEREN_SVG, "m-bilspier",                "Bilspier",                  "Klik op de bilspier.", "h54", None),
+]
+
+AANWIJZEN = []
+for _id, svg, region, naam, vraag, h, hint in AANWIJZEN_RAW:
+    item = {"id": _id, "hoofdstuk": h, "svg": svg, "region": region, "naam": naam, "vraag": vraag}
+    if hint: item["hint"] = hint
+    AANWIJZEN.append(item)
+
+# ---------------------------------------------------------------------------
 # Bouw en schrijf
 # ---------------------------------------------------------------------------
 data = {
@@ -493,6 +537,7 @@ data = {
     "feiten":       F,
     "verbanden":    V,
     "vragen":       Q,
+    "aanwijzen":    AANWIJZEN,
 }
 
 OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -505,3 +550,4 @@ print(f"  vragen:       {len(Q)}  "
       f"(mc={sum(1 for q in Q if q['type']=='mc')} "
       f"open={sum(1 for q in Q if q['type']=='open')} "
       f"inzicht={sum(1 for q in Q if q['type']=='inzicht')})")
+print(f"  aanwijzen:    {len(AANWIJZEN)}")

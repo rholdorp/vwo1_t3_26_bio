@@ -33,6 +33,11 @@ const Data = (() => {
         throw new Error(`Vraag ${q.id}: onbekend type "${q.type}".`);
       }
     }
+    if (j.aanwijzen && !Array.isArray(j.aanwijzen)) throw new Error('content.json: "aanwijzen" moet een lijst zijn.');
+    for (const a of (j.aanwijzen || [])) {
+      if (!a.id || !a.svg || !a.region || !a.naam || !a.vraag)
+        throw new Error(`Aanwijskaart ${a.id || "?"}: id/svg/region/naam/vraag verplicht.`);
+    }
     for (const v of j.verbanden) {
       for (const ref of (v.betreft || [])) {
         if (!bids.has(ref)) throw new Error(`Verband ${v.id} verwijst naar onbekend begrip "${ref}".`);

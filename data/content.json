@@ -1500,5 +1500,224 @@
       ],
       "afbeelding": "img/pages/PXL_20260524_101740664.jpg"
     }
+  ],
+  "aanwijzen": [
+    {
+      "id": "a-schedel",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-schedel",
+      "naam": "Schedel",
+      "vraag": "Klik op de schedel."
+    },
+    {
+      "id": "a-onderkaak",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-onderkaak",
+      "naam": "Onderkaak",
+      "vraag": "Klik op de onderkaak."
+    },
+    {
+      "id": "a-halswervels",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-halswervels",
+      "naam": "Halswervels",
+      "vraag": "Klik op de halswervels.",
+      "hint": "Bovenste deel van de wervelkolom."
+    },
+    {
+      "id": "a-sleutelbeen",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-sleutelbeen",
+      "naam": "Sleutelbeen",
+      "vraag": "Klik op het sleutelbeen.",
+      "hint": "Onderdeel van de schoudergordel, vooraan."
+    },
+    {
+      "id": "a-borstbeen",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-borstbeen",
+      "naam": "Borstbeen",
+      "vraag": "Klik op het borstbeen.",
+      "hint": "Plat bot midden in de borstkas."
+    },
+    {
+      "id": "a-ribben",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-ribben",
+      "naam": "Ribben",
+      "vraag": "Klik op de ribben."
+    },
+    {
+      "id": "a-wervelkolom",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-wervelkolom",
+      "naam": "Wervelkolom",
+      "vraag": "Klik op de wervelkolom (lendenwervels).",
+      "hint": "De wervels onder de ribben."
+    },
+    {
+      "id": "a-opperarmbeen",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-opperarmbeen",
+      "naam": "Opperarmbeen",
+      "vraag": "Klik op het opperarmbeen.",
+      "hint": "Het bovenarmbot."
+    },
+    {
+      "id": "a-spaakbeen",
+      "hoofdstuk": "h53",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-spaakbeen",
+      "naam": "Spaakbeen",
+      "vraag": "Klik op het spaakbeen (onderarm, duim-kant).",
+      "hint": "Onderarmbot aan de buitenkant (duim-zijde)."
+    },
+    {
+      "id": "a-ellepijp",
+      "hoofdstuk": "h53",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-ellepijp",
+      "naam": "Ellepijp",
+      "vraag": "Klik op de ellepijp (onderarm, pink-kant).",
+      "hint": "Onderarmbot aan de binnenkant (pink-zijde)."
+    },
+    {
+      "id": "a-bekkengordel",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-bekkengordel",
+      "naam": "Bekkengordel",
+      "vraag": "Klik op de bekkengordel (het bekken)."
+    },
+    {
+      "id": "a-dijbeen",
+      "hoofdstuk": "h51",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-dijbeen",
+      "naam": "Dijbeen",
+      "vraag": "Klik op het dijbeen.",
+      "hint": "Het bot van je bovenbeen."
+    },
+    {
+      "id": "a-kniebeen",
+      "hoofdstuk": "h53",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-kniebeen",
+      "naam": "Kniebeen",
+      "vraag": "Klik op het kniebeen (de knieschijf)."
+    },
+    {
+      "id": "a-scheenbeen",
+      "hoofdstuk": "h53",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-scheenbeen",
+      "naam": "Scheenbeen",
+      "vraag": "Klik op het scheenbeen (binnenkant van het onderbeen).",
+      "hint": "Het dikke onderbeen-bot aan de voorkant."
+    },
+    {
+      "id": "a-kuitbeen",
+      "hoofdstuk": "h53",
+      "svg": "img/anatomy/skelet.svg",
+      "region": "r-kuitbeen",
+      "naam": "Kuitbeen",
+      "vraag": "Klik op het kuitbeen (buitenkant van het onderbeen).",
+      "hint": "Het dunne onderbeen-bot, naast het scheenbeen."
+    },
+    {
+      "id": "a-biceps",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-biceps",
+      "naam": "Biceps",
+      "vraag": "Klik op de biceps (buigspier van de bovenarm).",
+      "hint": "Voorkant van de bovenarm."
+    },
+    {
+      "id": "a-triceps",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-triceps",
+      "naam": "Triceps",
+      "vraag": "Klik op de triceps (strekspier van de bovenarm).",
+      "hint": "Achterkant van de bovenarm."
+    },
+    {
+      "id": "a-kuitspier",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-kuitspier",
+      "naam": "Kuitspier",
+      "vraag": "Klik op de kuitspier.",
+      "hint": "Achterkant van het onderbeen."
+    },
+    {
+      "id": "a-scheenspier",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-scheenbeenspier",
+      "naam": "Scheenbeenspier",
+      "vraag": "Klik op de scheenbeenspier (antagonist van de kuitspier).",
+      "hint": "Voorkant van het onderbeen."
+    },
+    {
+      "id": "a-dijbeenspier",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-dijbeenspier",
+      "naam": "Voorste dijbeenspier",
+      "vraag": "Klik op de voorste dijbeenspier (quadriceps).",
+      "hint": "Voorkant van het bovenbeen."
+    },
+    {
+      "id": "a-achterdij",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-achterste-dijbeenspier",
+      "naam": "Achterste dijbeenspier",
+      "vraag": "Klik op de achterste dijbeenspier (hamstring).",
+      "hint": "Achterkant van het bovenbeen."
+    },
+    {
+      "id": "a-borstspier",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-borstspier",
+      "naam": "Borstspier",
+      "vraag": "Klik op de borstspier."
+    },
+    {
+      "id": "a-buikspieren",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-buikspieren",
+      "naam": "Buikspieren",
+      "vraag": "Klik op de buikspieren."
+    },
+    {
+      "id": "a-rugspieren",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-rugspieren",
+      "naam": "Rugspieren",
+      "vraag": "Klik op de rugspieren.",
+      "hint": "Op de rug — gebruik het achteraanzicht."
+    },
+    {
+      "id": "a-bilspier",
+      "hoofdstuk": "h54",
+      "svg": "img/anatomy/spieren.svg",
+      "region": "m-bilspier",
+      "naam": "Bilspier",
+      "vraag": "Klik op de bilspier."
+    }
   ]
 }
