@@ -57,77 +57,12 @@
       ]
     },
     {
-      "id": "b-schedel",
-      "hoofdstuk": "h51",
-      "term": "Schedel",
-      "definitie": "De botten van het hoofd, inclusief de bovenkaak en onderkaak. Beschermt de hersenen en geeft het hoofd zijn vorm.",
-      "afbeelding": "img/pages/PXL_20260524_101705255.jpg",
-      "tags": [
-        "hoofd"
-      ]
-    },
-    {
-      "id": "b-voorhoofdsbeen",
-      "hoofdstuk": "h51",
-      "term": "Voorhoofdsbeen",
-      "definitie": "Het grote bot van je voorhoofd; onderdeel van de schedel.",
-      "tags": [
-        "hoofd"
-      ]
-    },
-    {
-      "id": "b-wandbeen",
-      "hoofdstuk": "h51",
-      "term": "Wandbeen",
-      "definitie": "Bot aan de zijkant/bovenkant van de schedel.",
-      "tags": [
-        "hoofd"
-      ]
-    },
-    {
       "id": "b-achterhoofdsbeen",
       "hoofdstuk": "h51",
       "term": "Achterhoofdsbeen",
       "definitie": "Bot achter aan de schedel; daar zit het gat waar het ruggenmerg naar binnen komt.",
       "tags": [
         "hoofd"
-      ]
-    },
-    {
-      "id": "b-bovenkaak",
-      "hoofdstuk": "h51",
-      "term": "Bovenkaak",
-      "definitie": "Bovenste, vaste kaakbot van de schedel.",
-      "tags": [
-        "hoofd"
-      ]
-    },
-    {
-      "id": "b-onderkaak",
-      "hoofdstuk": "h51",
-      "term": "Onderkaak",
-      "definitie": "Onderste, beweegbare kaak; het enige beweegbare bot in de schedel.",
-      "tags": [
-        "hoofd"
-      ]
-    },
-    {
-      "id": "b-wervelkolom",
-      "hoofdstuk": "h51",
-      "term": "Wervelkolom (ruggengraat)",
-      "definitie": "De rij wervels die de schedel draagt en de romp stevigheid geeft. Bestaat uit halswervels, borstwervels, lendenwervels, heiligbeen en staartbeen.",
-      "afbeelding": "img/pages/PXL_20260524_101705255.jpg",
-      "tags": [
-        "romp"
-      ]
-    },
-    {
-      "id": "b-halswervels",
-      "hoofdstuk": "h51",
-      "term": "Halswervels",
-      "definitie": "De bovenste wervels van de wervelkolom; zitten in de hals.",
-      "tags": [
-        "romp"
       ]
     },
     {
@@ -177,172 +112,10 @@
       ]
     },
     {
-      "id": "b-ribben",
-      "hoofdstuk": "h51",
-      "term": "Ribben",
-      "definitie": "Botten die samen met het borstbeen en de borstwervels de borstkas vormen.",
-      "tags": [
-        "romp"
-      ]
-    },
-    {
-      "id": "b-borstbeen",
-      "hoofdstuk": "h51",
-      "term": "Borstbeen",
-      "definitie": "Plat bot voor in de borstkas waaraan de ribben vastzitten.",
-      "tags": [
-        "romp"
-      ]
-    },
-    {
       "id": "b-schoudergordel",
       "hoofdstuk": "h51",
       "term": "Schoudergordel",
       "definitie": "De sleutelbeenderen en schouderbladen samen; verbinden de armen met de romp.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-sleutelbeen",
-      "hoofdstuk": "h51",
-      "term": "Sleutelbeen",
-      "definitie": "Bot tussen het borstbeen en de schoudertop; deel van de schoudergordel.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-schouderblad",
-      "hoofdstuk": "h51",
-      "term": "Schouderblad",
-      "definitie": "Plat, driehoekig bot op de rug; deel van de schoudergordel.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-bekkengordel",
-      "hoofdstuk": "h51",
-      "term": "Bekkengordel (bekken)",
-      "definitie": "De heupbeenderen en het schaambeen samen; verbinden de benen met de romp.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-hand",
-      "hoofdstuk": "h51",
-      "term": "Handwortelbeentjes",
-      "definitie": "Acht kleine botjes in de pols; samen met de middenhandsbeentjes en vingerkootjes vormen ze de hand.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-middenhand",
-      "hoofdstuk": "h51",
-      "term": "Middenhandsbeentjes",
-      "definitie": "De vijf langwerpige botjes in je handpalm, tussen pols en vingers.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-vingerkootjes",
-      "hoofdstuk": "h51",
-      "term": "Vingerkootjes",
-      "definitie": "De korte botjes waaruit elke vinger is opgebouwd (duim: 2; andere vingers: 3 elk).",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-voet",
-      "hoofdstuk": "h51",
-      "term": "Voetwortelbeentjes",
-      "definitie": "Zeven botjes die de wreef vormen; samen met de middenvoetsbeentjes en teenkootjes vormen ze de voet.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-middenvoet",
-      "hoofdstuk": "h51",
-      "term": "Middenvoetsbeentjes",
-      "definitie": "Vijf langwerpige botjes in de voet, tussen wreef en tenen.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-teenkootjes",
-      "hoofdstuk": "h51",
-      "term": "Teenkootjes",
-      "definitie": "De korte botjes waaruit elke teen bestaat (grote teen: 2; andere tenen: 3 elk).",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-opperarmbeen",
-      "hoofdstuk": "h51",
-      "term": "Opperarmbeen",
-      "definitie": "Het bovenbot van de arm, tussen schouder en elleboog.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-spaakbeen",
-      "hoofdstuk": "h53",
-      "term": "Spaakbeen",
-      "definitie": "Onderarmbot aan de duim-kant (buitenkant). Aan dit bot trekt de biceps om je arm te buigen.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-ellepijp",
-      "hoofdstuk": "h53",
-      "term": "Ellepijp",
-      "definitie": "Onderarmbot aan de pink-kant (binnenkant). Aan dit bot trekt de triceps om je arm te strekken.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-dijbeen",
-      "hoofdstuk": "h51",
-      "term": "Dijbeen",
-      "definitie": "Het grote, sterke bovenbeenbot — het langste bot van het lichaam.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-kniebeen",
-      "hoofdstuk": "h53",
-      "term": "Kniebeen (knieschijf)",
-      "definitie": "Klein, plat bot vóór het kniegewricht; beschermt het gewricht en geeft pezen extra hefboomkracht.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-scheenbeen",
-      "hoofdstuk": "h53",
-      "term": "Scheenbeen",
-      "definitie": "Het dikke onderbeen-bot aan de binnenkant; draagt het lichaamsgewicht.",
-      "tags": [
-        "ledematen"
-      ]
-    },
-    {
-      "id": "b-kuitbeen",
-      "hoofdstuk": "h53",
-      "term": "Kuitbeen",
-      "definitie": "Het dunne onderbeen-bot aan de buitenkant, naast het scheenbeen.",
       "tags": [
         "ledematen"
       ]
@@ -878,15 +651,6 @@
       ]
     },
     {
-      "id": "b-achillespees",
-      "hoofdstuk": "h54",
-      "term": "Achillespees",
-      "definitie": "De dikke pees die de kuitspier met het hielbot verbindt; de langste en sterkste pees van het lichaam.",
-      "tags": [
-        "bouw"
-      ]
-    },
-    {
       "id": "b-actine-myo",
       "hoofdstuk": "h54",
       "term": "Actine en myosine",
@@ -961,118 +725,6 @@
       "afbeelding": "img/pages/PXL_20260524_102051386.jpg",
       "tags": [
         "werking"
-      ]
-    },
-    {
-      "id": "b-biceps",
-      "hoofdstuk": "h54",
-      "term": "Biceps (buigspier bovenarm)",
-      "definitie": "Spier aan de voorkant van je bovenarm die je elleboog buigt; antagonist van de triceps.",
-      "afbeelding": "img/pages/PXL_20260524_102104432.jpg",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-triceps",
-      "hoofdstuk": "h54",
-      "term": "Triceps (strekspier bovenarm)",
-      "definitie": "Spier aan de achterkant van je bovenarm die je elleboog strekt; antagonist van de biceps.",
-      "afbeelding": "img/pages/PXL_20260524_102104432.jpg",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-kuitspier",
-      "hoofdstuk": "h54",
-      "term": "Kuitspier",
-      "definitie": "Spier achter aan het onderbeen; strekt de voet (op je tenen staan). Antagonist is de scheenbeenspier.",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-scheenspier",
-      "hoofdstuk": "h54",
-      "term": "Scheenbeenspier",
-      "definitie": "Spier vóór aan het onderbeen; tilt je voet op. Antagonist van de kuitspier — dunner dan de kuitspier omdat hij minder kracht hoeft te leveren.",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-dijbeenspier",
-      "hoofdstuk": "h54",
-      "term": "Voorste dijbeenspier (quadriceps)",
-      "definitie": "Grote spier aan de voorkant van het bovenbeen; strekt de knie.",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-achterdij",
-      "hoofdstuk": "h54",
-      "term": "Achterste dijbeenspier (hamstring)",
-      "definitie": "Spier aan de achterkant van het bovenbeen; buigt de knie. Antagonist van de voorste dijbeenspier.",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-bilspier",
-      "hoofdstuk": "h54",
-      "term": "Bilspier",
-      "definitie": "Grote spier op je achterwerk; strekt de heup (helpt bij staan, lopen en opstaan).",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-buikspier",
-      "hoofdstuk": "h54",
-      "term": "Buikspieren",
-      "definitie": "Spieren aan de voorkant van de buik die de romp buigen en de organen op hun plaats houden.",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-rugspier",
-      "hoofdstuk": "h54",
-      "term": "Rugspieren",
-      "definitie": "Spieren langs de wervelkolom die je rug rechthouden; antagonist van de buikspieren. Bestaan grotendeels uit langzame vezels (houdings­spieren).",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-borstspier",
-      "hoofdstuk": "h54",
-      "term": "Borstspier",
-      "definitie": "Grote spier op de borst; trekt de bovenarm naar voren en naar binnen (bv. bij drukken, knijpen).",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-monnikskap",
-      "hoofdstuk": "h54",
-      "term": "Monnikskapspier",
-      "definitie": "Grote spier in nek en bovenrug die het schouderblad beweegt en je hoofd ondersteunt.",
-      "afbeelding": "img/pages/PXL_20260524_102026478.jpg",
-      "tags": [
-        "voorbeeld"
-      ]
-    },
-    {
-      "id": "b-tussenribsp",
-      "hoofdstuk": "h54",
-      "term": "Tussenribspieren",
-      "definitie": "Spieren tussen de ribben die je gebruikt bij de ademhaling. Bestaan uit dwarsgestreept spierweefsel, maar werken (meestal) onbewust — ze horen bij de onwillekeurige spieren.",
-      "afbeelding": "img/pages/PXL_20260524_102109211.jpg",
-      "tags": [
-        "voorbeeld"
       ]
     }
   ],
@@ -1229,9 +881,7 @@
       "titel": "Bouw → functie (skelet)",
       "uitleg": "Aan de vorm van een bot kun je vaak zien wat het doet. De schedel is gewelfd → beschermt de hersenen. De borstkas is gebogen → beschermt hart en longen. Pijpbeenderen zijn hol → licht maar sterk. Dezelfde logica zie je bij stuwdammen: gebogen = stevig onder druk.",
       "betreft": [
-        "b-schedel",
         "b-borstkas",
-        "b-bekkengordel",
         "b-pijpbeen",
         "b-stevigheid",
         "b-bescherming"
@@ -1257,8 +907,6 @@
       "uitleg": "Een spier kan alleen trekken, niet duwen. Daarom werken spieren in paren: terwijl de buigspier (bv. biceps) aanspant, ontspant de strekspier (triceps). Bij strekken keert dat om. Zonder antagonist zou een gebogen arm niet meer recht kunnen.",
       "betreft": [
         "b-antagonist",
-        "b-biceps",
-        "b-triceps",
         "b-skeletspier"
       ],
       "afbeelding": "img/pages/PXL_20260524_102051386.jpg"
@@ -1317,7 +965,6 @@
       "titel": "Tussenribspieren: bouw vs functie",
       "uitleg": "Normaal gesproken hoort dwarsgestreept spierweefsel bij bewuste bewegingen, en glad bij onbewuste. Tussenribspieren zijn een uitzondering: ze zijn dwarsgestreept (zoals skeletspieren) maar werken meestal onbewust, want anders zou je ademhaling stoppen als je in slaap valt. Dit laat zien dat indeling op functie (willekeurig vs onwillekeurig) niet altijd samenvalt met indeling op bouw (dwarsgestreept vs glad).",
       "betreft": [
-        "b-tussenribsp",
         "b-dwarsgestr",
         "b-glad",
         "b-bewust",

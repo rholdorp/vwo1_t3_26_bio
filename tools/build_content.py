@@ -46,38 +46,13 @@ SKEL_ILL   = p("101718373")
 b("b-skelet",       "h51", "Skelet (geraamte)", "Het geheel van ongeveer 200 botten in het lichaam; samen ook wel het beenderstelsel genoemd.", SKEL_OVER, "Boek 5.1: skeletoverzicht", ["overzicht"])
 b("b-bot",          "h51", "Bot (been, beender)", "Een stevig, hard onderdeel van het skelet; mensen hebben er ongeveer 200.", tags=["overzicht"])
 b("b-hoofd-romp-led","h51","Hoofd, romp en ledematen", "De drie hoofddelen waarin je het menselijk lichaam kunt indelen. Ledematen zijn de armen en benen.", SKEL_ILL, tags=["indeling"])
-b("b-schedel",      "h51", "Schedel", "De botten van het hoofd, inclusief de bovenkaak en onderkaak. Beschermt de hersenen en geeft het hoofd zijn vorm.", SKEL_OVER, tags=["hoofd"])
-b("b-voorhoofdsbeen","h51","Voorhoofdsbeen", "Het grote bot van je voorhoofd; onderdeel van de schedel.", tags=["hoofd"])
-b("b-wandbeen",     "h51", "Wandbeen", "Bot aan de zijkant/bovenkant van de schedel.", tags=["hoofd"])
 b("b-achterhoofdsbeen","h51","Achterhoofdsbeen", "Bot achter aan de schedel; daar zit het gat waar het ruggenmerg naar binnen komt.", tags=["hoofd"])
-b("b-bovenkaak",    "h51", "Bovenkaak", "Bovenste, vaste kaakbot van de schedel.", tags=["hoofd"])
-b("b-onderkaak",    "h51", "Onderkaak", "Onderste, beweegbare kaak; het enige beweegbare bot in de schedel.", tags=["hoofd"])
-b("b-wervelkolom",  "h51", "Wervelkolom (ruggengraat)", "De rij wervels die de schedel draagt en de romp stevigheid geeft. Bestaat uit halswervels, borstwervels, lendenwervels, heiligbeen en staartbeen.", SKEL_OVER, tags=["romp"])
-b("b-halswervels",  "h51", "Halswervels", "De bovenste wervels van de wervelkolom; zitten in de hals.", tags=["romp"])
 b("b-borstwervels", "h51", "Borstwervels", "Wervels waaraan de ribben vastzitten; samen met ribben en borstbeen vormen ze de borstkas.", tags=["romp"])
 b("b-lendenwervels","h51", "Lendenwervels", "De grote, sterke wervels in je onderrug; dragen het meeste gewicht.", tags=["romp"])
 b("b-heiligbeen",   "h51", "Heiligbeen", "Driehoekig bot onderaan de wervelkolom, vastgegroeid aan het bekken.", tags=["romp"])
 b("b-staartbeen",   "h51", "Staartbeen (stuitje)", "Het kleine bot helemaal onderaan de wervelkolom.", tags=["romp"])
 b("b-borstkas",     "h51", "Borstkas", "Wordt gevormd door de borstwervels, de ribben en het borstbeen. Beschermt longen en hart.", tags=["romp", "bescherming"])
-b("b-ribben",       "h51", "Ribben", "Botten die samen met het borstbeen en de borstwervels de borstkas vormen.", tags=["romp"])
-b("b-borstbeen",    "h51", "Borstbeen", "Plat bot voor in de borstkas waaraan de ribben vastzitten.", tags=["romp"])
 b("b-schoudergordel","h51","Schoudergordel", "De sleutelbeenderen en schouderbladen samen; verbinden de armen met de romp.", tags=["ledematen"])
-b("b-sleutelbeen",  "h51", "Sleutelbeen", "Bot tussen het borstbeen en de schoudertop; deel van de schoudergordel.", tags=["ledematen"])
-b("b-schouderblad", "h51", "Schouderblad", "Plat, driehoekig bot op de rug; deel van de schoudergordel.", tags=["ledematen"])
-b("b-bekkengordel", "h51", "Bekkengordel (bekken)", "De heupbeenderen en het schaambeen samen; verbinden de benen met de romp.", tags=["ledematen"])
-b("b-hand",         "h51", "Handwortelbeentjes", "Acht kleine botjes in de pols; samen met de middenhandsbeentjes en vingerkootjes vormen ze de hand.", tags=["ledematen"])
-b("b-middenhand",   "h51", "Middenhandsbeentjes", "De vijf langwerpige botjes in je handpalm, tussen pols en vingers.", tags=["ledematen"])
-b("b-vingerkootjes","h51", "Vingerkootjes", "De korte botjes waaruit elke vinger is opgebouwd (duim: 2; andere vingers: 3 elk).", tags=["ledematen"])
-b("b-voet",         "h51", "Voetwortelbeentjes", "Zeven botjes die de wreef vormen; samen met de middenvoetsbeentjes en teenkootjes vormen ze de voet.", tags=["ledematen"])
-b("b-middenvoet",   "h51", "Middenvoetsbeentjes", "Vijf langwerpige botjes in de voet, tussen wreef en tenen.", tags=["ledematen"])
-b("b-teenkootjes",  "h51", "Teenkootjes", "De korte botjes waaruit elke teen bestaat (grote teen: 2; andere tenen: 3 elk).", tags=["ledematen"])
-b("b-opperarmbeen", "h51", "Opperarmbeen", "Het bovenbot van de arm, tussen schouder en elleboog.", tags=["ledematen"])
-b("b-spaakbeen",    "h53", "Spaakbeen", "Onderarmbot aan de duim-kant (buitenkant). Aan dit bot trekt de biceps om je arm te buigen.", tags=["ledematen"])
-b("b-ellepijp",     "h53", "Ellepijp", "Onderarmbot aan de pink-kant (binnenkant). Aan dit bot trekt de triceps om je arm te strekken.", tags=["ledematen"])
-b("b-dijbeen",      "h51", "Dijbeen", "Het grote, sterke bovenbeenbot — het langste bot van het lichaam.", tags=["ledematen"])
-b("b-kniebeen",     "h53", "Kniebeen (knieschijf)", "Klein, plat bot vóór het kniegewricht; beschermt het gewricht en geeft pezen extra hefboomkracht.", tags=["ledematen"])
-b("b-scheenbeen",   "h53", "Scheenbeen", "Het dikke onderbeen-bot aan de binnenkant; draagt het lichaamsgewicht.", tags=["ledematen"])
-b("b-kuitbeen",     "h53", "Kuitbeen", "Het dunne onderbeen-bot aan de buitenkant, naast het scheenbeen.", tags=["ledematen"])
 b("b-uitsteeksels", "h51", "Uitsteeksels (van botten)", "Stukjes bot die uitsteken; daaraan zitten spieren vast.", tags=["spieraanhechting"])
 b("b-stevigheid",   "h51", "Functie: stevigheid", "Het skelet houdt het lichaam rechtop en geeft het zijn vorm.", FUNC_SKEL, tags=["functie"])
 b("b-bescherming",  "h51", "Functie: bescherming", "Het skelet beschermt kwetsbare organen: schedel→hersenen, borstkas→hart en longen, wervelkolom→ruggenmerg.", FUNC_SKEL, tags=["functie"])
@@ -163,7 +138,6 @@ b("b-spiervezel",  "h54", "Spiervezel", "Een spiercel: lang, dun, met meerdere k
 b("b-spierfibril", "h54", "Spierfibril", "Dun draadje binnenin een spiervezel; de fibrillen schuiven in elkaar en daardoor wordt de spier korter (samentrekken).", tags=["werking"])
 b("b-aanhechting", "h54", "Aanhechtingsplaats", "De plaats (vaak op een uitsteeksel van een bot) waar een spier (via een pees) aan het bot vastzit.", SPIER_BOUW, tags=["bouw"])
 b("b-pees",        "h54", "Pees (spierpees)", "Stevig, niet-rekbaar bindweefsel waarmee een spier aan een bot vastzit.", tags=["bouw"])
-b("b-achillespees","h54", "Achillespees", "De dikke pees die de kuitspier met het hielbot verbindt; de langste en sterkste pees van het lichaam.", tags=["bouw"])
 b("b-actine-myo",  "h54", "Actine en myosine", "Twee soorten eiwitten waaruit de spierfibrillen bestaan. Bij het samentrekken schuiven actine- en myosinedraden in elkaar, waardoor de spier korter wordt.", SPIER_WEEFS, tags=["werking"])
 b("b-dwarsgestr",  "h54", "Dwarsgestreept spierweefsel", "Spierweefsel van skeletspieren; vezels met afwisselend lichte en donkere banden. Kun je bewust aansturen, raakt snel vermoeid.", SPIER_WEEFS, tags=["type"])
 b("b-glad",        "h54", "Glad spierweefsel", "Spierweefsel in orgaanwanden (slokdarm, maag, darmen). Werkt onbewust en raakt minder snel vermoeid; cellen zijn langwerpig zonder strepen.", SPIER_WEEFS, tags=["type"])
@@ -172,18 +146,6 @@ b("b-orgaanspier", "h54", "Orgaanspieren", "Spieren in de wand van organen, gema
 b("b-snelle-vez",  "h54", "Snelle spiervezels", "Vezels die snel en krachtig samentrekken, maar snel vermoeid raken. Belangrijk voor sprinten, springen, kogelstoten.", tags=["vezel"])
 b("b-langz-vez",   "h54", "Langzame spiervezels", "Vezels die minder krachtig zijn, maar lang kunnen doorgaan zonder vermoeid te raken. Belangrijk voor uithoudingssport.", tags=["vezel"])
 b("b-antagonist",  "h54", "Antagonistisch (spier)paar", "Twee spieren die het tegenovergestelde doen: als de ene aanspant (buigt), ontspant de ander (en omgekeerd). Een spier kan zelf alleen trekken, niet duwen.", ANTAG, tags=["werking"])
-b("b-biceps",      "h54", "Biceps (buigspier bovenarm)", "Spier aan de voorkant van je bovenarm die je elleboog buigt; antagonist van de triceps.", INZ_KOGEL, tags=["voorbeeld"])
-b("b-triceps",     "h54", "Triceps (strekspier bovenarm)", "Spier aan de achterkant van je bovenarm die je elleboog strekt; antagonist van de biceps.", INZ_KOGEL, tags=["voorbeeld"])
-b("b-kuitspier",   "h54", "Kuitspier", "Spier achter aan het onderbeen; strekt de voet (op je tenen staan). Antagonist is de scheenbeenspier.", tags=["voorbeeld"])
-b("b-scheenspier", "h54", "Scheenbeenspier", "Spier vóór aan het onderbeen; tilt je voet op. Antagonist van de kuitspier — dunner dan de kuitspier omdat hij minder kracht hoeft te leveren.", tags=["voorbeeld"])
-b("b-dijbeenspier","h54", "Voorste dijbeenspier (quadriceps)", "Grote spier aan de voorkant van het bovenbeen; strekt de knie.", tags=["voorbeeld"])
-b("b-achterdij",   "h54", "Achterste dijbeenspier (hamstring)", "Spier aan de achterkant van het bovenbeen; buigt de knie. Antagonist van de voorste dijbeenspier.", tags=["voorbeeld"])
-b("b-bilspier",    "h54", "Bilspier", "Grote spier op je achterwerk; strekt de heup (helpt bij staan, lopen en opstaan).", tags=["voorbeeld"])
-b("b-buikspier",   "h54", "Buikspieren", "Spieren aan de voorkant van de buik die de romp buigen en de organen op hun plaats houden.", tags=["voorbeeld"])
-b("b-rugspier",    "h54", "Rugspieren", "Spieren langs de wervelkolom die je rug rechthouden; antagonist van de buikspieren. Bestaan grotendeels uit langzame vezels (houdings­spieren).", tags=["voorbeeld"])
-b("b-borstspier",  "h54", "Borstspier", "Grote spier op de borst; trekt de bovenarm naar voren en naar binnen (bv. bij drukken, knijpen).", tags=["voorbeeld"])
-b("b-monnikskap",  "h54", "Monnikskapspier", "Grote spier in nek en bovenrug die het schouderblad beweegt en je hoofd ondersteunt.", SPIER_INTRO, tags=["voorbeeld"])
-b("b-tussenribsp", "h54", "Tussenribspieren", "Spieren tussen de ribben die je gebruikt bij de ademhaling. Bestaan uit dwarsgestreept spierweefsel, maar werken (meestal) onbewust — ze horen bij de onwillekeurige spieren.", FSHD_PG, tags=["voorbeeld"])
 
 # ---------------------------------------------------------------------------
 # Feiten (losse leerbare uitspraken)
@@ -237,7 +199,7 @@ v("v-kalk-collageen", "h52", "Kalkzouten + collageen = stevig én taai bot",
 
 v("v-bouw-functie",   "h51", "Bouw → functie (skelet)",
   "Aan de vorm van een bot kun je vaak zien wat het doet. De schedel is gewelfd → beschermt de hersenen. De borstkas is gebogen → beschermt hart en longen. Pijpbeenderen zijn hol → licht maar sterk. Dezelfde logica zie je bij stuwdammen: gebogen = stevig onder druk.",
-  ["b-schedel", "b-borstkas", "b-bekkengordel", "b-pijpbeen", "b-stevigheid", "b-bescherming"])
+  ["b-borstkas", "b-pijpbeen", "b-stevigheid", "b-bescherming"])
 
 v("v-gew-type-keuze", "h53", "Type gewricht past bij de beweging die nodig is",
   "Welk gewricht waar zit, hangt af van welke beweging je nodig hebt. In de schouder en heup heb je álle kanten op nodig → kogelgewricht. In de knie en elleboog wil je alleen buigen/strekken → scharniergewricht. Bij de onderarm wil je draaien → rolgewricht. Tussen sleutelbeen en schoudertop is weinig beweging nodig → schuifgewricht.",
@@ -245,7 +207,7 @@ v("v-gew-type-keuze", "h53", "Type gewricht past bij de beweging die nodig is",
 
 v("v-antagonist",     "h54", "Antagonistische spierparen",
   "Een spier kan alleen trekken, niet duwen. Daarom werken spieren in paren: terwijl de buigspier (bv. biceps) aanspant, ontspant de strekspier (triceps). Bij strekken keert dat om. Zonder antagonist zou een gebogen arm niet meer recht kunnen.",
-  ["b-antagonist", "b-biceps", "b-triceps", "b-skeletspier"], ANTAG)
+  ["b-antagonist", "b-skeletspier"], ANTAG)
 
 v("v-vezels-sport",   "h54", "Spiervezeltype past bij type sport",
   "Snelle vezels leveren veel kracht maar raken snel vermoeid → handig voor sprinters, kogelstoters, springers. Langzame vezels leveren minder kracht maar gaan lang door → handig voor marathonlopers, wielrenners. Elke sporter heeft een mix; de verhouding bepaalt waarin iemand uitblinkt.",
@@ -648,7 +610,7 @@ v("v-fontan-groei", "h52", "Fontanellen + groeischijven: ruimte om te groeien",
 
 v("v-tussenrib-paradox", "h54", "Tussenribspieren: bouw vs functie",
   "Normaal gesproken hoort dwarsgestreept spierweefsel bij bewuste bewegingen, en glad bij onbewuste. Tussenribspieren zijn een uitzondering: ze zijn dwarsgestreept (zoals skeletspieren) maar werken meestal onbewust, want anders zou je ademhaling stoppen als je in slaap valt. Dit laat zien dat indeling op functie (willekeurig vs onwillekeurig) niet altijd samenvalt met indeling op bouw (dwarsgestreept vs glad).",
-  ["b-tussenribsp", "b-dwarsgestr", "b-glad", "b-bewust", "b-onbewust"], FSHD_PG)
+  ["b-dwarsgestr", "b-glad", "b-bewust", "b-onbewust"], FSHD_PG)
 
 v("v-actine-myosine-vezels", "h54", "Eiwitten → fibrillen → vezels → kracht",
   "Het samentrekken van een spier begint heel klein: actine- en myosine-eiwitten schuiven in elkaar in een spierfibril. Veel fibrillen zitten in één spiervezel, en hoe meer vezels tegelijk samentrekken, hoe meer kracht de hele spier zet. Of die kracht kort en hard (snelle vezels) of lang en gelijkmatig (langzame vezels) is, hangt af van het type vezel.",
